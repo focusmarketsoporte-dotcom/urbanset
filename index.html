@@ -1,0 +1,2539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>URBANSET — Ropa Deportiva Premium</title>
+  <meta name="description" content="Ropa deportiva premium: camisetas, camperas, conjuntos y pantalones. Calidad real. Envío a todo el país.">
+  <meta property="og:title" content="URBANSET — Ropa Deportiva Premium">
+  <meta property="og:description" content="Entrená, salí y verte mejor todos los días. Calidad real, envío a todo el país.">
+  <meta property="og:image" content="foto-hero.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+  /* ============================================================
+     RESET & BASE
+  ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --white:   #ffffff;
+    --off:     #f7f7f7;
+    --light:   #f0f0f0;
+    --border:  #e5e5e5;
+    --text:    #0a0a0a;
+    --mid:     #444444;
+    --muted:   #888888;
+    --dark:    #0a0a0a;
+    --dark2:   #1a1a1a;
+    --gold:    #c8a850;
+    --green:   #16a34a;
+    --red:     #dc2626;
+    --blue-mp: #009ee3;
+    --nav-h:   64px;
+    --r-sm:    6px;
+    --r-md:    12px;
+    --r-lg:    18px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; border: none; background: none; font-family: inherit; }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+  /* ============================================================
+     ANNOUNCEMENT BAR
+  ============================================================ */
+  .ann-bar {
+    background: var(--dark);
+    color: rgba(255,255,255,.85);
+    overflow: hidden;
+    height: 34px;
+    display: flex;
+    align-items: center;
+  }
+  .ann-track {
+    display: flex;
+    animation: scrollAnn 30s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  .ann-track span {
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 40px;
+  }
+  .ann-track span::before {
+    content: '⬥';
+    margin-right: 14px;
+    opacity: .35;
+    font-size: .5rem;
+  }
+  @keyframes scrollAnn {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ============================================================
+     NAVBAR
+  ============================================================ */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.07); }
+  .navbar.hide { transform: translateY(-100%); }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-h);
+    gap: 20px;
+  }
+  .nav-logo {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--dark);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .nav-logo em { font-style: normal; color: var(--gold); }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  .nav-links a {
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid);
+    transition: color .2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--dark);
+    transition: width .2s ease;
+  }
+  .nav-links a:hover { color: var(--dark); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .nav-btn-cta {
+    background: var(--dark);
+    color: #fff;
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: background .2s, transform .15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .nav-btn-cta:hover { background: #222; transform: translateY(-1px); }
+  .nav-wa-btn {
+    width: 36px;
+    height: 36px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .nav-wa-btn:hover { transform: scale(1.08); box-shadow: 0 4px 14px rgba(37,211,102,.35); }
+  .nav-wa-btn svg { width: 18px; height: 18px; fill: currentColor; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    flex-shrink: 0;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--dark);
+    border-radius: 2px;
+    transition: transform .3s ease, opacity .25s ease;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile drawer */
+  .mob-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 1100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+  }
+  .mob-overlay.open { opacity: 1; pointer-events: all; }
+  .mob-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(300px, 90%);
+    height: 100%;
+    background: var(--white);
+    z-index: 1200;
+    transition: right .35s cubic-bezier(.4,0,.2,1);
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .mob-drawer.open { right: 0; }
+  .mob-drawer-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+  .mob-drawer-logo { font-size: 1rem; font-weight: 900; letter-spacing: 5px; text-transform: uppercase; }
+  .mob-drawer-logo em { font-style: normal; color: var(--gold); }
+  .mob-close-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    background: var(--light);
+    color: var(--mid);
+    transition: background .2s;
+  }
+  .mob-close-btn:hover { background: var(--border); }
+  .mob-nav-list { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+  .mob-nav-list a {
+    display: block;
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid);
+    padding: 13px 10px;
+    border-radius: var(--r-sm);
+    transition: background .2s, color .2s;
+  }
+  .mob-nav-list a:hover { background: var(--off); color: var(--dark); }
+  .mob-cta-btn {
+    display: block;
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: var(--r-sm);
+    margin-top: 20px;
+    transition: background .2s;
+  }
+  .mob-cta-btn:hover { background: #222; }
+  .mob-wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #25D366;
+    color: #fff;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 13px;
+    border-radius: var(--r-sm);
+    margin-top: 10px;
+  }
+  .mob-wa-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+  /* ============================================================
+     HERO
+  ============================================================ */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    min-height: 100vh;
+    max-height: 920px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0a0a0a;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    opacity: .65;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      rgba(0,0,0,.80) 0%,
+      rgba(0,0,0,.50) 50%,
+      rgba(0,0,0,.20) 100%
+    );
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 640px;
+  }
+  .hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.18);
+    color: rgba(255,255,255,.88);
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+    animation: fadeUp .65s ease both;
+  }
+  .hero-pill::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+  .hero-title {
+    font-size: clamp(2.1rem, 5.5vw, 3.9rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+    animation: fadeUp .65s .1s ease both;
+  }
+  .hero-title em { font-style: normal; color: var(--gold); }
+  .hero-sub {
+    font-size: clamp(.88rem, 1.8vw, 1rem);
+    font-weight: 400;
+    color: rgba(255,255,255,.72);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 480px;
+    animation: fadeUp .65s .18s ease both;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    animation: fadeUp .65s .26s ease both;
+  }
+  .btn-primary {
+    background: #fff;
+    color: var(--dark);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border-radius: 2px;
+    transition: background .2s, transform .15s, box-shadow .2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0,0,0,.3);
+  }
+  .btn-outline-white {
+    background: transparent;
+    color: #fff;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px 28px;
+    border: 1.5px solid rgba(255,255,255,.45);
+    border-radius: 2px;
+    transition: border-color .2s, background .2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+  .hero-bottom {
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    animation: fadeUp .65s .38s ease both;
+    width: fit-content;
+  }
+  .hero-stat {
+    color: #fff;
+    padding-right: 32px;
+    margin-right: 32px;
+    border-right: 1px solid rgba(255,255,255,.15);
+  }
+  .hero-stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .hero-stat strong {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #fff;
+  }
+  .hero-stat span {
+    font-size: .58rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.5);
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============================================================
+     BENEFITS
+  ============================================================ */
+  .benefits-section {
+    background: var(--off);
+    border-bottom: 1px solid var(--border);
+  }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 28px;
+    border-right: 1px solid var(--border);
+  }
+  .benefit-item:last-child { border-right: none; }
+  .benefit-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .benefit-text strong {
+    display: block;
+    font-size: .74rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .benefit-text span {
+    font-size: .63rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  /* ============================================================
+     SECTION UTILITIES
+  ============================================================ */
+  .section-label {
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    line-height: 1.08;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+  .section-sub {
+    font-size: .88rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 500px;
+  }
+  .section-head { margin-bottom: 48px; }
+  .section-head.centered { text-align: center; }
+  .section-head.centered .section-sub { margin: 0 auto; }
+
+  /* ============================================================
+     PRODUCTS
+  ============================================================ */
+  .products-section { padding: 80px 0 100px; }
+  .products-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+  .cat-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .cat-btn {
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    color: var(--muted);
+    background: transparent;
+    transition: all .2s;
+  }
+  .cat-btn:hover { border-color: var(--dark); color: var(--dark); }
+  .cat-btn.active { background: var(--dark); border-color: var(--dark); color: #fff; }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Product card */
+  .prod-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .prod-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 48px rgba(0,0,0,.1);
+  }
+  .prod-img-wrap {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--light);
+  }
+  .prod-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease;
+  }
+  .prod-card:hover .prod-img-wrap img { transform: scale(1.05); }
+  .prod-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: .57rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+    z-index: 1;
+    color: #fff;
+    background: var(--dark);
+  }
+  .prod-badge.oferta { background: var(--red); }
+  .prod-badge.nuevo  { background: var(--green); }
+  .prod-viewers {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,.6);
+    color: rgba(255,255,255,.9);
+    font-size: .56rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 1;
+    backdrop-filter: blur(4px);
+  }
+  .prod-dot {
+    width: 5px;
+    height: 5px;
+    background: #4ade80;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: blink 2s ease infinite;
+  }
+  @keyframes blink {
+    0%,100% { opacity: 1; }
+    50%      { opacity: .3; }
+  }
+  .prod-body {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .prod-stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: .78rem;
+    color: var(--gold);
+  }
+  .prod-stars span { font-size: .58rem; color: var(--muted); font-weight: 600; }
+  .prod-brand {
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .prod-name {
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .prod-prices {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+  .prod-price { font-size: 1.05rem; font-weight: 900; color: var(--text); }
+  .prod-price-old {
+    font-size: .78rem;
+    color: var(--muted);
+    text-decoration: line-through;
+    font-weight: 400;
+  }
+  .prod-discount {
+    font-size: .6rem;
+    font-weight: 800;
+    color: var(--green);
+    background: rgba(22,163,74,.1);
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+  .prod-stock {
+    font-size: .62rem;
+    font-weight: 700;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+  }
+  .prod-stock.ok { color: var(--green); }
+  .prod-stock-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+  .prod-buy {
+    width: 100%;
+    background: var(--dark);
+    color: #fff;
+    font-size: .64rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 13px;
+    border-radius: var(--r-sm);
+    margin-top: 10px;
+    transition: background .2s, transform .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .prod-buy:hover { background: #1a1a1a; transform: translateY(-1px); }
+  .prod-buy img { height: 16px; border-radius: 50%; }
+
+  /* ============================================================
+     WHY US
+  ============================================================ */
+  .why-section {
+    padding: 80px 0;
+    background: var(--dark);
+    color: #fff;
+  }
+  .why-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .why-copy .section-label { color: rgba(200,168,80,.75); }
+  .why-copy .section-title { color: #fff; }
+  .why-copy .section-sub { color: rgba(255,255,255,.5); max-width: 420px; }
+  .why-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: var(--dark);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px 28px;
+    border-radius: 2px;
+    margin-top: 32px;
+    transition: background .2s, transform .15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .why-btn:hover { background: #f0f0f0; transform: translateY(-2px); }
+  .why-table-wrap {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+  }
+  .why-table { width: 100%; border-collapse: collapse; }
+  .why-table thead tr {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  .why-table th {
+    padding: 16px 22px;
+    font-size: .6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  .why-table th:first-child { color: var(--gold); }
+  .why-table th:last-child { color: rgba(255,255,255,.3); }
+  .why-table td {
+    padding: 14px 22px;
+    font-size: .78rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+  }
+  .why-table tr:last-child td { border-bottom: none; }
+  .why-table td:first-child { color: rgba(255,255,255,.88); }
+  .why-table td:last-child { color: rgba(255,255,255,.28); }
+  .chk { color: #4ade80; margin-right: 8px; font-size: .85rem; }
+  .xmk { color: rgba(255,100,100,.5); margin-right: 8px; font-size: .85rem; }
+
+  /* ============================================================
+     REVIEWS
+  ============================================================ */
+  .reviews-section { padding: 80px 0; background: var(--off); }
+  .reviews-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .reviews-agg {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .reviews-score {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--text);
+  }
+  .reviews-meta-stars { color: var(--gold); font-size: 1rem; margin-bottom: 4px; }
+  .reviews-meta strong { font-size: .75rem; font-weight: 700; display: block; }
+  .reviews-meta span { font-size: .62rem; color: var(--muted); }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .review-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: 22px;
+  }
+  .review-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .review-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--mid);
+    flex-shrink: 0;
+    border: 2px solid var(--border);
+  }
+  .review-name { font-size: .82rem; font-weight: 700; color: var(--text); }
+  .review-prod { font-size: .6rem; color: var(--muted); font-weight: 500; margin-top: 2px; }
+  .review-stars { color: var(--gold); font-size: .82rem; margin-bottom: 10px; }
+  .review-text { font-size: .78rem; color: var(--mid); line-height: 1.68; }
+  .reviews-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .reviews-stat strong {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .reviews-stat span {
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ============================================================
+     CATEGORIES
+  ============================================================ */
+  .categories-section { padding: 80px 0; }
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+  .cat-tile {
+    position: relative;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 3/4;
+    background: var(--light);
+    display: block;
+    text-decoration: none;
+  }
+  .cat-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease;
+  }
+  .cat-tile:hover img { transform: scale(1.07); }
+  .cat-tile-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.78) 35%, rgba(0,0,0,.05) 70%);
+    transition: background .3s;
+  }
+  .cat-tile:hover .cat-tile-overlay { background: linear-gradient(to top, rgba(0,0,0,.88) 35%, rgba(0,0,0,.15) 70%); }
+  .cat-tile-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 16px;
+    color: #fff;
+  }
+  .cat-tile-label span {
+    display: block;
+    font-size: .56rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.5);
+    margin-bottom: 3px;
+  }
+  .cat-tile-label strong {
+    display: block;
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     FAQ
+  ============================================================ */
+  .faq-section { padding: 80px 0; background: var(--white); }
+  .faq-list { max-width: 720px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    width: 100%;
+    text-align: left;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: .88rem;
+    font-weight: 700;
+    color: var(--text);
+    cursor: pointer;
+    transition: color .2s;
+  }
+  .faq-q:hover { color: var(--mid); }
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border: 1.5px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    color: var(--mid);
+    transition: transform .35s ease, background .2s, border-color .2s, color .2s;
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+    background: var(--dark);
+    border-color: var(--dark);
+    color: #fff;
+  }
+  .faq-a {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .4s ease, padding .3s ease;
+    font-size: .84rem;
+    color: var(--mid);
+    line-height: 1.75;
+  }
+  .faq-item.open .faq-a { max-height: 220px; padding-bottom: 22px; }
+
+  /* ============================================================
+     FOOTER
+  ============================================================ */
+  .footer {
+    background: var(--dark);
+    color: rgba(255,255,255,.6);
+    padding: 64px 0 0;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+  .footer-logo {
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  .footer-logo em { font-style: normal; color: var(--gold); }
+  .footer-desc {
+    font-size: .75rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,.38);
+    max-width: 240px;
+    margin-bottom: 22px;
+  }
+  .footer-social { display: flex; gap: 10px; }
+  .footer-social a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    transition: border-color .2s, background .2s;
+    color: rgba(255,255,255,.55);
+  }
+  .footer-social a:hover { border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.07); color: #fff; }
+  .footer-social a svg { width: 16px; height: 16px; fill: currentColor; }
+  .footer-col-title {
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.35);
+    margin-bottom: 18px;
+  }
+  .footer-col-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+  .footer-col-links a {
+    font-size: .76rem;
+    color: rgba(255,255,255,.5);
+    transition: color .2s;
+  }
+  .footer-col-links a:hover { color: #fff; }
+  .footer-bottom {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-copy { font-size: .65rem; color: rgba(255,255,255,.25); }
+  .footer-pays { display: flex; gap: 8px; align-items: center; }
+  .footer-pay {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,.35);
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     MP MODAL
+  ============================================================ */
+  .mp-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.65);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+    backdrop-filter: blur(5px);
+  }
+  .mp-overlay.open { opacity: 1; pointer-events: all; }
+  .mp-box {
+    background: var(--white);
+    border-radius: var(--r-lg);
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+    transform: translateY(24px) scale(.96);
+    transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+    box-shadow: 0 32px 80px rgba(0,0,0,.4);
+  }
+  .mp-overlay.open .mp-box { transform: translateY(0) scale(1); }
+  .mp-box-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 22px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .mp-box-head h4 {
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+  .mp-box-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--light);
+    font-size: .9rem;
+    color: var(--mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+  }
+  .mp-box-close:hover { background: var(--border); }
+  .mp-box-body { padding: 22px; }
+  .mp-prod-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .mp-prod-img {
+    width: 66px;
+    height: 66px;
+    border-radius: var(--r-sm);
+    object-fit: cover;
+    background: var(--light);
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+  }
+  .mp-prod-brand {
+    font-size: .57rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+  .mp-prod-name { font-size: .88rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+  .mp-prod-price { font-size: 1.1rem; font-weight: 900; color: var(--text); }
+  .mp-size-label {
+    display: block;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .mp-sizes { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .sz-btn {
+    min-width: 46px;
+    height: 42px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--r-sm);
+    font-size: .72rem;
+    font-weight: 700;
+    color: var(--mid);
+    background: transparent;
+    transition: all .15s;
+    padding: 0 8px;
+  }
+  .sz-btn:hover { border-color: var(--dark); color: var(--dark); }
+  .sz-btn.selected { background: var(--dark); border-color: var(--dark); color: #fff; }
+  .mp-pay-btn {
+    width: 100%;
+    background: var(--blue-mp);
+    color: #fff;
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 16px;
+    border-radius: var(--r-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background .2s, transform .15s;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mp-pay-btn:hover:not(:disabled) { background: #0086ca; transform: translateY(-1px); }
+  .mp-pay-btn:disabled { opacity: .7; cursor: not-allowed; }
+  .mp-pay-btn img { height: 18px; border-radius: 50%; }
+  .mp-pay-btn.loading .mp-btn-txt { opacity: 0; }
+  .mp-spinner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid rgba(255,255,255,.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+    display: none;
+  }
+  .mp-pay-btn.loading .mp-spinner { display: block; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .mp-safe {
+    text-align: center;
+    font-size: .62rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .mp-safe img { height: 14px; border-radius: 50%; }
+
+  /* ============================================================
+     TOAST
+  ============================================================ */
+  .toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(16px);
+    background: var(--dark);
+    color: #fff;
+    padding: 13px 24px;
+    border-radius: var(--r-sm);
+    font-size: .78rem;
+    font-weight: 600;
+    z-index: 3000;
+    opacity: 0;
+    transition: opacity .3s, transform .3s;
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast.success { background: var(--green); }
+  .toast.error   { background: var(--red); }
+
+  /* ============================================================
+     MOBILE BOTTOM BAR
+  ============================================================ */
+  .mob-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    gap: 10px;
+  }
+  .mob-bar-cat {
+    flex: 1;
+    background: var(--light);
+    color: var(--dark);
+    text-align: center;
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 13px;
+    border-radius: var(--r-sm);
+    transition: background .2s;
+  }
+  .mob-bar-cat:hover { background: var(--border); }
+  .mob-bar-wa {
+    flex: 1;
+    background: #25D366;
+    color: #fff;
+    text-align: center;
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 13px;
+    border-radius: var(--r-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .mob-bar-wa svg { width: 15px; height: 15px; fill: #fff; }
+
+  /* Sticky WA desktop */
+  .sticky-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 24px;
+    z-index: 800;
+    background: #25D366;
+    color: #fff;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(37,211,102,.4);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .sticky-wa:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,.55); }
+  .sticky-wa svg { width: 26px; height: 26px; fill: #fff; }
+
+  /* ============================================================
+     RIPPLE
+  ============================================================ */
+  .ripple-el {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,.22);
+    animation: ripple .6s ease-out forwards;
+    pointer-events: none;
+  }
+  @keyframes ripple {
+    from { transform: scale(0); opacity: .6; }
+    to   { transform: scale(1); opacity: 0; }
+  }
+
+  /* ============================================================
+     SCROLL REVEAL
+  ============================================================ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal.d1 { transition-delay: .08s; }
+  .reveal.d2 { transition-delay: .16s; }
+  .reveal.d3 { transition-delay: .24s; }
+  .reveal.d4 { transition-delay: .32s; }
+
+  /* ============================================================
+     RESPONSIVE
+  ============================================================ */
+  @media (max-width: 1100px) {
+    .products-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid   { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .why-inner     { gap: 48px; }
+  }
+  @media (max-width: 860px) {
+    .nav-links    { display: none; }
+    .nav-btn-cta  { display: none; }
+    .hamburger    { display: flex; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .cat-grid      { grid-template-columns: repeat(3, 1fr); }
+    .reviews-grid  { grid-template-columns: repeat(2, 1fr); }
+    .why-inner     { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .benefit-item  { border-bottom: 1px solid var(--border); }
+    .benefit-item:nth-child(2) { border-right: none; }
+    .mob-bar  { display: flex; }
+    .sticky-wa { bottom: 84px; }
+    .hero-bottom { bottom: 80px; }
+  }
+  @media (max-width: 580px) {
+    .container     { padding: 0 16px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .cat-grid      { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid  { grid-template-columns: 1fr; }
+    .footer-grid   { grid-template-columns: 1fr; gap: 28px; }
+    .reviews-stats { gap: 28px; }
+    .hero-stats    { gap: 0; }
+    .hero-stat     { padding-right: 20px; margin-right: 20px; }
+    .hero-stat strong { font-size: 1.2rem; }
+    .why-inner     { gap: 36px; }
+  }
+  @media (max-width: 400px) {
+    .products-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     ANNOUNCEMENT BAR
+════════════════════════════════════════ -->
+<div class="ann-bar" aria-label="Información de envíos y garantía">
+  <div class="ann-track">
+    <span>🚚 Envíos a todo el país</span>
+    <span>🔁 Cambios fáciles sin vueltas</span>
+    <span>🔒 Pago 100% seguro</span>
+    <span>⚡ Entrega rápida</span>
+    <span>🏆 Calidad premium garantizada</span>
+    <span>📦 Más de 500 pedidos entregados</span>
+    <span>🚚 Envíos a todo el país</span>
+    <span>🔁 Cambios fáciles sin vueltas</span>
+    <span>🔒 Pago 100% seguro</span>
+    <span>⚡ Entrega rápida</span>
+    <span>🏆 Calidad premium garantizada</span>
+    <span>📦 Más de 500 pedidos entregados</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#" class="nav-logo">URBAN<em>SET</em></a>
+
+      <div class="nav-links">
+        <a href="#productos">Productos</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#faq">Ayuda</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/5492213543509?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
+           class="nav-wa-btn"
+           target="_blank"
+           rel="noopener"
+           aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
+        </a>
+        <a href="#productos" class="nav-btn-cta">Comprar ahora</a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer overlay -->
+<div class="mob-overlay" id="mobOverlay"></div>
+<nav class="mob-drawer" id="mobDrawer">
+  <div class="mob-drawer-head">
+    <span class="mob-drawer-logo">URBAN<em>SET</em></span>
+    <button class="mob-close-btn" id="mobClose">✕</button>
+  </div>
+  <div class="mob-nav-list">
+    <a href="#productos">Productos</a>
+    <a href="#categorias">Categorías</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#faq">Preguntas frecuentes</a>
+  </div>
+  <a href="#productos" class="mob-cta-btn">Comprar ahora</a>
+  <a href="https://wa.me/5492213543509?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
+     class="mob-wa-btn"
+     target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
+    WhatsApp
+  </a>
+</nav>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="prod-camiseta-arg-modelo.jpeg" alt="Ropa deportiva premium URBANSET" fetchpriority="high">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-pill">Nueva colección disponible</div>
+      <h1 class="hero-title">
+        Ropa deportiva<br>
+        <em>premium</em> para<br>
+        verte mejor.
+      </h1>
+      <p class="hero-sub">
+        Entrená, salí y lucí un look urbano que combina con todo.
+        Calidad real, comodidad garantizada.
+      </p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn-primary">
+          Comprar ahora
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#categorias" class="btn-outline-white">Ver catálogo</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="container">
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>+500</strong>
+          <span>Clientes felices</span>
+        </div>
+        <div class="hero-stat">
+          <strong>4.9★</strong>
+          <span>Calificación</span>
+        </div>
+        <div class="hero-stat">
+          <strong>3–7</strong>
+          <span>Días de entrega</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     BENEFITS
+════════════════════════════════════════ -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="benefits-grid">
+      <div class="benefit-item reveal">
+        <div class="benefit-icon">🏆</div>
+        <div class="benefit-text">
+          <strong>Calidad Premium</strong>
+          <span>Materiales resistentes y cómodos</span>
+        </div>
+      </div>
+      <div class="benefit-item reveal d1">
+        <div class="benefit-icon">🚚</div>
+        <div class="benefit-text">
+          <strong>Envíos a todo el país</strong>
+          <span>3 a 7 días hábiles</span>
+        </div>
+      </div>
+      <div class="benefit-item reveal d2">
+        <div class="benefit-icon">🔁</div>
+        <div class="benefit-text">
+          <strong>Cambios fáciles</strong>
+          <span>Sin complicaciones ni costo extra</span>
+        </div>
+      </div>
+      <div class="benefit-item reveal d3">
+        <div class="benefit-icon">🔒</div>
+        <div class="benefit-text">
+          <strong>Compra protegida</strong>
+          <span>Pago seguro con Mercado Pago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PRODUCTS
+════════════════════════════════════════ -->
+<section class="products-section" id="productos">
+  <div class="container">
+
+    <div class="products-top">
+      <div class="section-head" style="margin-bottom:0;">
+        <div class="section-label">Nuestra colección</div>
+        <h2 class="section-title">Productos destacados</h2>
+      </div>
+      <div class="cat-filters" role="group" aria-label="Filtrar por categoría">
+        <button class="cat-btn active" data-cat="todos">Todos</button>
+        <button class="cat-btn" data-cat="camisetas">Camisetas</button>
+        <button class="cat-btn" data-cat="camperas">Camperas</button>
+        <button class="cat-btn" data-cat="pantalones">Pantalones</button>
+        <button class="cat-btn" data-cat="conjuntos">Conjuntos</button>
+        <button class="cat-btn" data-cat="buzos">Buzos</button>
+      </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+      <!-- 1 — Camiseta Argentina #10 -->
+      <article class="prod-card reveal" data-cat="camisetas">
+        <div class="prod-img-wrap">
+          <img src="prod-camiseta-argentina.png" alt="Camiseta Argentina #10" loading="lazy">
+          <div class="prod-badge">⚡ Más vendido</div>
+          <div class="prod-viewers" id="v1"><span class="prod-dot"></span><span class="v-count">8</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(47 reseñas)</span></div>
+          <div class="prod-brand">Adidas · AFA</div>
+          <div class="prod-name">Camiseta Argentina #10 Premium</div>
+          <div class="prod-prices">
+            <span class="prod-price">$18.000</span>
+            <span class="prod-price-old">$24.000</span>
+            <span class="prod-discount">−25%</span>
+          </div>
+          <div class="prod-stock">
+            <span class="prod-stock-dot"></span>Últimas 6 unidades
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Camiseta Argentina #10',18000,'prod-camiseta-argentina.png','Adidas · AFA')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 2 — Remera Térmica Everlast -->
+      <article class="prod-card reveal d1" data-cat="camisetas">
+        <div class="prod-img-wrap">
+          <img src="prod-remera-everlast.png" alt="Remera Térmica Everlast" loading="lazy">
+          <div class="prod-viewers" id="v2"><span class="prod-dot"></span><span class="v-count">5</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(32 reseñas)</span></div>
+          <div class="prod-brand">Everlast</div>
+          <div class="prod-name">Remera Térmica Manga Larga</div>
+          <div class="prod-prices">
+            <span class="prod-price">$14.000</span>
+            <span class="prod-price-old">$18.000</span>
+            <span class="prod-discount">−22%</span>
+          </div>
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>En stock
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Remera Térmica Everlast',14000,'prod-remera-everlast.png','Everlast')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 3 — Campera Adidas -->
+      <article class="prod-card reveal d2" data-cat="camperas">
+        <div class="prod-img-wrap">
+          <img src="prod-campera-adidas.jpeg" alt="Campera Adidas" loading="lazy">
+          <div class="prod-badge nuevo">Nuevo</div>
+          <div class="prod-viewers" id="v3"><span class="prod-dot"></span><span class="v-count">9</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(38 reseñas)</span></div>
+          <div class="prod-brand">Adidas</div>
+          <div class="prod-name">Campera con Capucha Zip</div>
+          <div class="prod-prices">
+            <span class="prod-price">$45.000</span>
+            <span class="prod-price-old">$60.000</span>
+            <span class="prod-discount">−25%</span>
+          </div>
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>En stock
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Campera Adidas Zip',45000,'prod-campera-adidas.jpeg','Adidas')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 4 — Campera Everlast -->
+      <article class="prod-card reveal d3" data-cat="camperas">
+        <div class="prod-img-wrap">
+          <img src="prod-campera-everlast.png" alt="Campera Everlast" loading="lazy">
+          <div class="prod-viewers" id="v4"><span class="prod-dot"></span><span class="v-count">6</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(24 reseñas)</span></div>
+          <div class="prod-brand">Everlast</div>
+          <div class="prod-name">Campera Bicolor Zip Urbana</div>
+          <div class="prod-prices">
+            <span class="prod-price">$36.000</span>
+            <span class="prod-price-old">$48.000</span>
+            <span class="prod-discount">−25%</span>
+          </div>
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>En stock
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Campera Everlast Bicolor',36000,'prod-campera-everlast.png','Everlast')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 5 — Pantalón Nike -->
+      <article class="prod-card reveal" data-cat="pantalones">
+        <div class="prod-img-wrap">
+          <img src="prod-pantalon-nike.png" alt="Pantalón Nike" loading="lazy">
+          <div class="prod-badge">⚡ Más vendido</div>
+          <div class="prod-viewers" id="v5"><span class="prod-dot"></span><span class="v-count">7</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(53 reseñas)</span></div>
+          <div class="prod-brand">Nike</div>
+          <div class="prod-name">Pantalón Deportivo Swoosh</div>
+          <div class="prod-prices">
+            <span class="prod-price">$32.000</span>
+            <span class="prod-price-old">$42.000</span>
+            <span class="prod-discount">−24%</span>
+          </div>
+          <div class="prod-stock">
+            <span class="prod-stock-dot"></span>Últimas 8 unidades
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Pantalón Nike Swoosh',32000,'prod-pantalon-nike.png','Nike')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 6 — Pantalón ISU Gris -->
+      <article class="prod-card reveal d1" data-cat="pantalones">
+        <div class="prod-img-wrap">
+          <img src="prod-pantalon-isu-gris.png" alt="Pantalón ISU Gris" loading="lazy">
+          <div class="prod-viewers" id="v6"><span class="prod-dot"></span><span class="v-count">4</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(19 reseñas)</span></div>
+          <div class="prod-brand">ISU</div>
+          <div class="prod-name">Pantalón Training Gris</div>
+          <div class="prod-prices">
+            <span class="prod-price">$26.000</span>
+            <span class="prod-price-old">$34.000</span>
+            <span class="prod-discount">−24%</span>
+          </div>
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>En stock
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Pantalón ISU Gris',26000,'prod-pantalon-isu-gris.png','ISU')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 7 — Pantalón ISU Negro -->
+      <article class="prod-card reveal d2" data-cat="pantalones">
+        <div class="prod-img-wrap">
+          <img src="prod-pantalon-isu-negro.png" alt="Pantalón ISU Negro" loading="lazy">
+          <div class="prod-viewers" id="v7"><span class="prod-dot"></span><span class="v-count">5</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(22 reseñas)</span></div>
+          <div class="prod-brand">ISU</div>
+          <div class="prod-name">Pantalón Training Negro</div>
+          <div class="prod-prices">
+            <span class="prod-price">$24.000</span>
+            <span class="prod-price-old">$32.000</span>
+            <span class="prod-discount">−25%</span>
+          </div>
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>En stock
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Pantalón ISU Negro',24000,'prod-pantalon-isu-negro.png','ISU')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 8 — Conjunto Everlast -->
+      <article class="prod-card reveal d3" data-cat="conjuntos">
+        <div class="prod-img-wrap">
+          <img src="prod-conjunto-everlast.jpeg" alt="Conjunto Everlast" loading="lazy">
+          <div class="prod-badge oferta">🔥 Oferta</div>
+          <div class="prod-viewers" id="v8"><span class="prod-dot"></span><span class="v-count">12</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(61 reseñas)</span></div>
+          <div class="prod-brand">Everlast</div>
+          <div class="prod-name">Conjunto Completo Deportivo</div>
+          <div class="prod-prices">
+            <span class="prod-price">$48.000</span>
+            <span class="prod-price-old">$64.000</span>
+            <span class="prod-discount">−25%</span>
+          </div>
+          <div class="prod-stock">
+            <span class="prod-stock-dot"></span>Últimas 4 unidades
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Conjunto Everlast Completo',48000,'prod-conjunto-everlast.jpeg','Everlast')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 9 — Conjunto Nike -->
+      <article class="prod-card reveal" data-cat="conjuntos">
+        <div class="prod-img-wrap">
+          <img src="prod-conjunto-nike.jpeg" alt="Conjunto Nike" loading="lazy">
+          <div class="prod-badge nuevo">Nuevo</div>
+          <div class="prod-viewers" id="v9"><span class="prod-dot"></span><span class="v-count">11</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(34 reseñas)</span></div>
+          <div class="prod-brand">Nike</div>
+          <div class="prod-name">Conjunto Training Nike</div>
+          <div class="prod-prices">
+            <span class="prod-price">$52.000</span>
+            <span class="prod-price-old">$68.000</span>
+            <span class="prod-discount">−24%</span>
+          </div>
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>En stock
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Conjunto Nike Training',52000,'prod-conjunto-nike.jpeg','Nike')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+      <!-- 10 — Pantalón Everlast -->
+      <article class="prod-card reveal d1" data-cat="pantalones">
+        <div class="prod-img-wrap">
+          <img src="prod-pantalon-everlast.jpeg" alt="Pantalón Everlast" loading="lazy">
+          <div class="prod-viewers" id="v10"><span class="prod-dot"></span><span class="v-count">3</span> viendo ahora</div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-stars">★★★★★ <span>(28 reseñas)</span></div>
+          <div class="prod-brand">Everlast</div>
+          <div class="prod-name">Pantalón Urban Cordón Amarillo</div>
+          <div class="prod-prices">
+            <span class="prod-price">$28.000</span>
+            <span class="prod-price-old">$36.000</span>
+            <span class="prod-discount">−22%</span>
+          </div>
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>En stock
+          </div>
+          <button class="prod-buy" onclick="abrirModalMP('Pantalón Everlast Urban',28000,'prod-pantalon-everlast.jpeg','Everlast')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          </button>
+        </div>
+      </article>
+
+    </div><!-- /products-grid -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     WHY US
+════════════════════════════════════════ -->
+<section class="why-section" id="nosotros">
+  <div class="container">
+    <div class="why-inner">
+
+      <div class="why-copy reveal">
+        <div class="section-label">Por qué elegirnos</div>
+        <h2 class="section-title">La diferencia<br>está en los detalles.</h2>
+        <p class="section-sub">
+          No vendemos ropa genérica. Cada prenda pasa un control de calidad
+          antes de llegar a vos. Fotos reales, atención real, resultados reales.
+        </p>
+        <a href="#productos" class="why-btn">
+          Ver todos los productos
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="why-table-wrap reveal d2">
+        <table class="why-table" aria-label="Comparación con otras tiendas">
+          <thead>
+            <tr>
+              <th>URBANSET</th>
+              <th>Otras tiendas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="chk">✓</span>Fotos reales del producto</td>
+              <td><span class="xmk">✗</span>Fotos genéricas</td>
+            </tr>
+            <tr>
+              <td><span class="chk">✓</span>Calidad controlada</td>
+              <td><span class="xmk">✗</span>Calidad variable</td>
+            </tr>
+            <tr>
+              <td><span class="chk">✓</span>Respuesta en menos de 2 hs</td>
+              <td><span class="xmk">✗</span>Respuesta lenta</td>
+            </tr>
+            <tr>
+              <td><span class="chk">✓</span>Cambios sin complicaciones</td>
+              <td><span class="xmk">✗</span>Proceso complicado</td>
+            </tr>
+            <tr>
+              <td><span class="chk">✓</span>Envío con seguimiento</td>
+              <td><span class="xmk">✗</span>Sin información</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     REVIEWS
+════════════════════════════════════════ -->
+<section class="reviews-section">
+  <div class="container">
+
+    <div class="reviews-top">
+      <div>
+        <div class="section-label">Reseñas verificadas</div>
+        <h2 class="section-title">Lo que dicen<br>nuestros clientes.</h2>
+      </div>
+      <div class="reviews-agg reveal">
+        <div class="reviews-score">4.9</div>
+        <div>
+          <div class="reviews-meta-stars">★★★★★</div>
+          <strong class="reviews-meta">Calificación promedio</strong>
+          <span class="reviews-meta">Basado en +300 reseñas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card reveal">
+        <div class="review-head">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Martín G.</div>
+            <div class="review-prod">Campera Adidas Pro</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Calidad increíble. Llegó en 3 días, el empaque impecable y el material es exactamente como las fotos. La recomiendo 100%. Ya pedí la segunda."</p>
+      </div>
+
+      <div class="review-card reveal d1">
+        <div class="review-head">
+          <div class="review-avatar">V</div>
+          <div>
+            <div class="review-name">Valentina R.</div>
+            <div class="review-prod">Camiseta Argentina</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Tal cual a la foto, los colores son hermosos y el talle es perfecto. La calidad se nota desde que abrís el paquete. Ya pedí la segunda."</p>
+      </div>
+
+      <div class="review-card reveal d2">
+        <div class="review-head">
+          <div class="review-avatar">L</div>
+          <div>
+            <div class="review-name">Lucas P.</div>
+            <div class="review-prod">Conjunto Nike Training</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"La mejor compra que hice. Calidad premium, muy cómodo para entrenar. El conjunto es exactamente lo que estaba buscando. 10/10."</p>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-head">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sofía M.</div>
+            <div class="review-prod">Pantalón Nike Cargo</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"El cambio de talle fue súper fácil. Me respondieron por WhatsApp al instante y en 2 días tenía la prenda correcta. Excelente atención."</p>
+      </div>
+
+      <div class="review-card reveal d1">
+        <div class="review-head">
+          <div class="review-avatar">D</div>
+          <div>
+            <div class="review-name">Diego C.</div>
+            <div class="review-prod">Buzo Darlon Urban</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Llegó bien embalado, el material es premium. Mismo que las fotos, sin sorpresas. Me encantó la atención y la rapidez del envío."</p>
+      </div>
+
+      <div class="review-card reveal d2">
+        <div class="review-head">
+          <div class="review-avatar">A</div>
+          <div>
+            <div class="review-name">Agustina F.</div>
+            <div class="review-prod">Campera Everlast</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Súper cómoda y abrigada. El diseño es hermoso y la calidad supera las expectativas. Definitivamente compraré de nuevo en URBANSET."</p>
+      </div>
+
+    </div>
+
+    <div class="reviews-stats">
+      <div class="reviews-stat reveal">
+        <strong>+500</strong>
+        <span>Pedidos entregados</span>
+      </div>
+      <div class="reviews-stat reveal d1">
+        <strong>4.9★</strong>
+        <span>Calificación promedio</span>
+      </div>
+      <div class="reviews-stat reveal d2">
+        <strong>98%</strong>
+        <span>Clientes satisfechos</span>
+      </div>
+      <div class="reviews-stat reveal d3">
+        <strong>&lt;2 hs</strong>
+        <span>Tiempo de respuesta</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CATEGORIES
+════════════════════════════════════════ -->
+<section class="categories-section" id="categorias">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-label">Explorar</div>
+      <h2 class="section-title">Comprar por categoría</h2>
+      <p class="section-sub">Encontrá exactamente lo que buscás.</p>
+    </div>
+    <div class="cat-grid">
+
+      <a href="#productos" class="cat-tile reveal" data-filter="camisetas">
+        <img src="prod-camiseta-argentina.png" alt="Camisetas" loading="lazy">
+        <div class="cat-tile-overlay"></div>
+        <div class="cat-tile-label">
+          <span>Explorar</span>
+          <strong>Camisetas</strong>
+        </div>
+      </a>
+
+      <a href="#productos" class="cat-tile reveal d1" data-filter="camperas">
+        <img src="prod-campera-adidas.jpeg" alt="Camperas" loading="lazy">
+        <div class="cat-tile-overlay"></div>
+        <div class="cat-tile-label">
+          <span>Explorar</span>
+          <strong>Camperas</strong>
+        </div>
+      </a>
+
+      <a href="#productos" class="cat-tile reveal d2" data-filter="pantalones">
+        <img src="prod-pantalon-nike.png" alt="Pantalones" loading="lazy">
+        <div class="cat-tile-overlay"></div>
+        <div class="cat-tile-label">
+          <span>Explorar</span>
+          <strong>Pantalones</strong>
+        </div>
+      </a>
+
+      <a href="#productos" class="cat-tile reveal d3" data-filter="conjuntos">
+        <img src="prod-conjunto-everlast.jpeg" alt="Conjuntos" loading="lazy">
+        <div class="cat-tile-overlay"></div>
+        <div class="cat-tile-label">
+          <span>Explorar</span>
+          <strong>Conjuntos</strong>
+        </div>
+      </a>
+
+      <a href="#productos" class="cat-tile reveal d4" data-filter="camisetas">
+        <img src="prod-camiseta-arg-modelo.jpeg" alt="Outfits" loading="lazy">
+        <div class="cat-tile-overlay"></div>
+        <div class="cat-tile-label">
+          <span>Explorar</span>
+          <strong>Outfits</strong>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FAQ
+════════════════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-label">Preguntas frecuentes</div>
+      <h2 class="section-title">¿Tenés dudas?<br>Te respondemos.</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Cómo elijo mi talle?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Usamos talle estándar argentino: S, M, L, XL y XXL. Si tenés dudas entre dos talles, siempre recomendamos elegir el más grande para mayor comodidad. También podés escribirnos por WhatsApp y te asesoramos en segundos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Cuánto tarda el envío?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Enviamos a todo el país en 3 a 7 días hábiles. Una vez despachado, te compartimos el número de seguimiento para que puedas rastrear tu pedido en tiempo real.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Cómo hago un cambio?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Es muy simple. Escribinos por WhatsApp dentro de los 10 días de recibido el pedido y coordinamos el cambio sin costo adicional. No queremos que te quedes con algo que no te queda perfecto.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Qué métodos de pago aceptan?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Aceptamos todos los medios de pago disponibles en Mercado Pago: tarjetas de crédito y débito (Visa, Mastercard, Amex), transferencia bancaria y efectivo en puntos de pago. El checkout es 100% seguro.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿La calidad es realmente premium?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Sí, sin dudas. Todas las prendas son revisadas antes de ser despachadas. Las fotos que ves son de los productos reales, sin filtros ni edición. Lo que ves es exactamente lo que recibís.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-logo">URBAN<em>SET</em></div>
+        <p class="footer-desc">
+          Ropa deportiva premium para entrenar, salir y verte mejor todos los días.
+          Calidad real, atención real.
+        </p>
+        <div class="footer-social">
+          <a href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/5492213543509" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Tienda</div>
+        <ul class="footer-col-links">
+          <li><a href="#productos">Todos los productos</a></li>
+          <li><a href="#productos" data-filter="camisetas">Camisetas</a></li>
+          <li><a href="#productos" data-filter="camperas">Camperas</a></li>
+          <li><a href="#productos" data-filter="pantalones">Pantalones</a></li>
+          <li><a href="#productos" data-filter="buzos">Buzos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Ayuda</div>
+        <ul class="footer-col-links">
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#faq">Guía de talles</a></li>
+          <li><a href="#faq">Política de cambios</a></li>
+          <li><a href="#faq">Información de envíos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contacto</div>
+        <ul class="footer-col-links">
+          <li>
+            <a href="https://wa.me/5492213543509" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener">
+              @urbanset_ar
+            </a>
+          </li>
+          <li><a href="mailto:urbanset.tienda@gmail.com">Email</a></li>
+        </ul>
+        <div style="margin-top:24px;">
+          <a href="https://wa.me/5492213543509?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
+             target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:11px 18px;border-radius:6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
+            Consultar
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 URBANSET. Todos los derechos reservados.</p>
+      <div class="footer-pays">
+        <span class="footer-pay">Visa</span>
+        <span class="footer-pay">Mastercard</span>
+        <span class="footer-pay">MP</span>
+        <span class="footer-pay">Transferencia</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     STICKY WHATSAPP
+════════════════════════════════════════ -->
+<a href="https://wa.me/5492213543509?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
+   class="sticky-wa"
+   target="_blank"
+   rel="noopener"
+   aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
+</a>
+
+<!-- ════════════════════════════════════════
+     MOBILE BOTTOM BAR
+════════════════════════════════════════ -->
+<div class="mob-bar" id="mobBar">
+  <a href="#productos" class="mob-bar-cat">Ver productos</a>
+  <a href="https://wa.me/5492213543509?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
+     class="mob-bar-wa" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- ════════════════════════════════════════
+     MP CHECKOUT MODAL
+════════════════════════════════════════ -->
+<div class="mp-overlay" id="mpOverlay" onclick="if(event.target===this)cerrarModalMP()">
+  <div class="mp-box">
+    <div class="mp-box-head">
+      <h4>URBANSET · Checkout</h4>
+      <button class="mp-box-close" onclick="cerrarModalMP()">✕</button>
+    </div>
+    <div class="mp-box-body">
+      <div class="mp-prod-row">
+        <img class="mp-prod-img" id="mpProdImg" src="" alt="">
+        <div>
+          <div class="mp-prod-brand" id="mpProdBrand"></div>
+          <div class="mp-prod-name"  id="mpProdName"></div>
+          <div class="mp-prod-price" id="mpProdPrice"></div>
+        </div>
+      </div>
+      <span class="mp-size-label">Elegí tu talle:</span>
+      <div class="mp-sizes" id="mpSizes">
+        <button class="sz-btn" data-sz="XS">XS</button>
+        <button class="sz-btn" data-sz="S">S</button>
+        <button class="sz-btn" data-sz="M">M</button>
+        <button class="sz-btn" data-sz="L">L</button>
+        <button class="sz-btn" data-sz="XL">XL</button>
+        <button class="sz-btn" data-sz="XXL">XXL</button>
+      </div>
+      <button class="mp-pay-btn" id="mpPayBtn" onclick="pagarConMP()">
+        <div class="mp-spinner" id="mpSpinner"></div>
+        <span class="mp-btn-txt" id="mpBtnTxt" style="display:inline-flex;align-items:center;gap:8px;">
+          Pagar con <img src="mp-logo.webp" alt="Mercado Pago">
+        </span>
+      </button>
+      <p class="mp-safe">
+        🔒 Checkout seguro —
+        <img src="mp-logo.webp" alt="Mercado Pago">
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+/* ── CONFIG ── */
+var WA_NUM = '5492213543509'; // ← reemplazá con tu número real
+
+/* ══════════════════════════════════════════
+   MERCADO PAGO CHECKOUT
+══════════════════════════════════════════ */
+var mpCurrentProduct = { nombre: '', precio: 0, img: '', marca: '' };
+var mpTalle = null;
+
+function abrirModalMP(nombre, precio, img, marca) {
+  mpCurrentProduct = { nombre: nombre, precio: precio, img: img, marca: marca || '' };
+  mpTalle = null;
+
+  document.getElementById('mpProdName').textContent  = nombre;
+  document.getElementById('mpProdBrand').textContent = marca || '';
+  document.getElementById('mpProdPrice').textContent = '$' + Number(precio).toLocaleString('es-AR');
+  document.getElementById('mpProdImg').src           = img || '';
+  document.getElementById('mpProdImg').alt           = nombre;
+
+  document.querySelectorAll('.sz-btn').forEach(function(b) { b.classList.remove('selected'); });
+
+  var btn = document.getElementById('mpPayBtn');
+  btn.disabled = false;
+  btn.classList.remove('loading');
+  document.getElementById('mpBtnTxt').innerHTML = 'Pagar con <img src="mp-logo.webp" style="height:18px;border-radius:50%;" alt="Mercado Pago">';
+
+  document.getElementById('mpOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarModalMP() {
+  document.getElementById('mpOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.sz-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.sz-btn').forEach(function(b) { b.classList.remove('selected'); });
+    this.classList.add('selected');
+    mpTalle = this.getAttribute('data-sz');
+  });
+});
+
+async function pagarConMP() {
+  if (!mpTalle) {
+    mostrarToast('Elegí un talle antes de continuar', 'error');
+    var sizes = document.getElementById('mpSizes');
+    var frames = ['-6px','6px','-4px','4px','0'];
+    frames.forEach(function(x, i) {
+      setTimeout(function() { sizes.style.transform = 'translateX(' + x + ')'; }, i * 75);
+    });
+    return;
+  }
+
+  var btn = document.getElementById('mpPayBtn');
+  btn.disabled = true;
+  btn.classList.add('loading');
+  document.getElementById('mpBtnTxt').textContent = 'Procesando...';
+
+  try {
+    var res = await fetch('/api/create-preference', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({
+        nombre: mpCurrentProduct.nombre,
+        precio: mpCurrentProduct.precio,
+        talle:  mpTalle
+      })
+    });
+    var data = await res.json();
+
+    if (!res.ok || data.error) throw new Error(data.error || 'Error al procesar');
+    window.location.href = data.init_point;
+
+  } catch (err) {
+    btn.disabled = false;
+    btn.classList.remove('loading');
+    document.getElementById('mpBtnTxt').innerHTML = 'Pagar con <img src="mp-logo.webp" style="height:18px;border-radius:50%;" alt="Mercado Pago">';
+    mostrarToast('Error: ' + (err.message || 'Intentá de nuevo'), 'error');
+  }
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') cerrarModalMP();
+});
+
+/* ── ESTADO DEL PAGO (return URL de MP) ── */
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var pago = params.get('pago');
+  if (pago === 'ok')        setTimeout(function() { mostrarToast('¡Pago exitoso! Pronto nos comunicamos con vos 🎉', 'success', 5000); }, 400);
+  else if (pago === 'error')     setTimeout(function() { mostrarToast('Hubo un problema con el pago. Intentá de nuevo.', 'error', 5000); }, 400);
+  else if (pago === 'pendiente') setTimeout(function() { mostrarToast('Tu pago está pendiente de confirmación.', '', 5000); }, 400);
+  if (pago) history.replaceState({}, '', window.location.pathname);
+})();
+
+/* ══════════════════════════════════════════
+   TOAST
+══════════════════════════════════════════ */
+function mostrarToast(msg, tipo, dur) {
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'toast' + (tipo ? ' ' + tipo : '');
+  el.classList.add('show');
+  setTimeout(function() { el.classList.remove('show'); }, dur || 3500);
+}
+
+/* ══════════════════════════════════════════
+   NAVBAR SCROLL
+══════════════════════════════════════════ */
+var navbar  = document.getElementById('navbar');
+var lastY   = 0;
+var ticking = false;
+window.addEventListener('scroll', function() {
+  if (!ticking) {
+    requestAnimationFrame(function() {
+      var y = window.scrollY;
+      navbar.classList.toggle('scrolled', y > 40);
+      if (y > 100) navbar.classList.toggle('hide', y > lastY);
+      else navbar.classList.remove('hide');
+      lastY   = y;
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+
+/* ══════════════════════════════════════════
+   HAMBURGER / MOBILE DRAWER
+══════════════════════════════════════════ */
+var hamburger  = document.getElementById('hamburger');
+var mobOverlay = document.getElementById('mobOverlay');
+var mobDrawer  = document.getElementById('mobDrawer');
+var mobClose   = document.getElementById('mobClose');
+
+function openDrawer() {
+  hamburger.classList.add('open');
+  mobDrawer.classList.add('open');
+  mobOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  hamburger.classList.remove('open');
+  mobDrawer.classList.remove('open');
+  mobOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+hamburger.addEventListener('click', function() {
+  mobDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
+});
+mobClose.addEventListener('click', closeDrawer);
+mobOverlay.addEventListener('click', closeDrawer);
+mobDrawer.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeDrawer); });
+
+/* ══════════════════════════════════════════
+   CATEGORY FILTER
+══════════════════════════════════════════ */
+document.querySelectorAll('.cat-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.cat-btn').forEach(function(b) { b.classList.remove('active'); });
+    this.classList.add('active');
+    var cat   = this.getAttribute('data-cat');
+    var delay = 0;
+    document.querySelectorAll('.prod-card').forEach(function(card) {
+      var match = cat === 'todos' || card.getAttribute('data-cat') === cat;
+      if (match) {
+        card.style.display = '';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(12px)';
+        (function(c, d) {
+          setTimeout(function() {
+            c.style.transition = 'opacity .3s, transform .3s';
+            c.style.opacity    = '1';
+            c.style.transform  = 'translateY(0)';
+          }, d);
+        })(card, delay);
+        delay += 45;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+/* Category tiles → trigger filter */
+document.querySelectorAll('.cat-tile[data-filter]').forEach(function(tile) {
+  tile.addEventListener('click', function(e) {
+    e.preventDefault();
+    var filter = this.getAttribute('data-filter');
+    document.querySelector('#productos').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(function() {
+      var btn = document.querySelector('.cat-btn[data-cat="' + filter + '"]');
+      if (btn) btn.click();
+    }, 600);
+  });
+});
+
+/* Footer filter links */
+document.querySelectorAll('[data-filter]').forEach(function(el) {
+  if (el.classList.contains('cat-tile')) return;
+  el.addEventListener('click', function(e) {
+    e.preventDefault();
+    var filter = this.getAttribute('data-filter');
+    document.querySelector('#productos').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(function() {
+      var btn = document.querySelector('.cat-btn[data-cat="' + filter + '"]');
+      if (btn) btn.click();
+    }, 600);
+  });
+});
+
+/* ══════════════════════════════════════════
+   FAQ ACCORDION
+══════════════════════════════════════════ */
+document.querySelectorAll('.faq-q').forEach(function(q) {
+  q.addEventListener('click', function() {
+    var item   = this.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+/* ══════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════ */
+var revealObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+
+/* ══════════════════════════════════════════
+   VIEWERS COUNTER
+══════════════════════════════════════════ */
+function randomViewers(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+function updateViewers() {
+  document.querySelectorAll('.prod-viewers .v-count').forEach(function(el) {
+    el.textContent = randomViewers(2, 14);
+  });
+}
+setInterval(updateViewers, 18000);
+
+/* ══════════════════════════════════════════
+   RIPPLE EFFECT
+══════════════════════════════════════════ */
+document.querySelectorAll('.prod-buy, .btn-primary, .btn-outline-white, .nav-btn-cta, .why-btn, .mob-cta-btn, .mp-pay-btn').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    var rect = this.getBoundingClientRect();
+    var size = Math.max(rect.width, rect.height) * 1.5;
+    var r    = document.createElement('span');
+    r.className = 'ripple-el';
+    r.style.cssText = 'width:' + size + 'px;height:' + size + 'px;' +
+      'top:'  + (e.clientY - rect.top  - size / 2) + 'px;' +
+      'left:' + (e.clientX - rect.left - size / 2) + 'px;';
+    this.appendChild(r);
+    setTimeout(function() { r.remove(); }, 650);
+  });
+});
+</script>
+</body>
+</html>

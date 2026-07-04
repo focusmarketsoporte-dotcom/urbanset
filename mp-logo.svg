@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 72" role="img" aria-label="Mercado Pago">
+  <!-- Óvalo con colores de MP -->
+  <ellipse cx="90" cy="26" rx="86" ry="24" fill="#eaf6fd" stroke="#009ee3" stroke-width="3"/>
+  <!-- Texto MP dentro del óvalo -->
+  <text x="90" y="33"
+        text-anchor="middle"
+        font-family="'Arial Black', Impact, sans-serif"
+        font-weight="900"
+        font-size="20"
+        fill="#009ee3"
+        letter-spacing="2">MP</text>
+  <!-- "mercado" -->
+  <text x="90" y="56"
+        text-anchor="middle"
+        font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900"
+        font-size="17"
+        fill="#009ee3">mercado</text>
+  <!-- "pago" -->
+  <text x="90" y="72"
+        text-anchor="middle"
+        font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900"
+        font-size="17"
+        fill="#003087">pago</text>
+</svg>
