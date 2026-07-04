@@ -873,6 +873,93 @@
   }
 
   /* ============================================================
+     HERO TRUST INDICATORS
+  ============================================================ */
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin-top: 20px;
+    animation: fadeUp .65s .34s ease both;
+  }
+  .hero-trust span {
+    font-size: .63rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.6);
+    letter-spacing: .3px;
+  }
+
+  /* ============================================================
+     TRUST CARDS
+  ============================================================ */
+  .trust-section { padding: 80px 0; background: var(--white); }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .trust-card {
+    background: var(--off);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: 28px 24px;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .trust-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0,0,0,.07);
+  }
+  .trust-icon { font-size: 1.5rem; margin-bottom: 14px; line-height: 1; }
+  .trust-card h3 {
+    font-size: .82rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .trust-card p {
+    font-size: .76rem;
+    color: var(--muted);
+    line-height: 1.72;
+  }
+
+  /* ============================================================
+     BRAND STORY
+  ============================================================ */
+  .story-section {
+    padding: 80px 0;
+    background: var(--dark);
+  }
+  .story-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .story-label {
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(200,168,80,.75);
+    margin-bottom: 24px;
+  }
+  .story-quote {
+    font-size: clamp(.9rem, 2vw, 1.06rem);
+    font-weight: 400;
+    color: rgba(255,255,255,.55);
+    line-height: 1.92;
+    margin-bottom: 28px;
+    font-style: normal;
+  }
+  .story-quote strong { color: rgba(255,255,255,.88); font-weight: 600; }
+  .story-sig {
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.22);
+  }
+
+  /* ============================================================
      CATEGORIES
   ============================================================ */
   .categories-section { padding: 80px 0; }
@@ -1353,6 +1440,7 @@
     .products-grid { grid-template-columns: repeat(2, 1fr); }
     .cat-grid      { grid-template-columns: repeat(3, 1fr); }
     .reviews-grid  { grid-template-columns: repeat(2, 1fr); }
+    .trust-grid    { grid-template-columns: repeat(2, 1fr); }
     .why-inner     { grid-template-columns: 1fr; }
     .benefits-grid { grid-template-columns: repeat(2, 1fr); }
     .benefit-item  { border-bottom: 1px solid var(--border); }
@@ -1366,6 +1454,7 @@
     .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .cat-grid      { grid-template-columns: repeat(2, 1fr); }
     .reviews-grid  { grid-template-columns: 1fr; }
+    .trust-grid    { grid-template-columns: 1fr; }
     .footer-grid   { grid-template-columns: 1fr; gap: 28px; }
     .reviews-stats { gap: 28px; }
     .hero-stats    { gap: 0; }
@@ -1469,19 +1558,25 @@
       <div class="hero-pill">Nueva colección disponible</div>
       <h1 class="hero-title">
         Ropa deportiva<br>
-        <em>premium</em> para<br>
-        verte mejor.
+        que se nota<br>
+        <em>desde el primer uso.</em>
       </h1>
       <p class="hero-sub">
-        Entrená, salí y lucí un look urbano que combina con todo.
-        Calidad real, comodidad garantizada.
+        Camisetas, camperas y conjuntos seleccionados para que te veas bien,
+        entrenés o salgas. Calidad real. Atención real.
       </p>
       <div class="hero-actions">
         <a href="#productos" class="btn-primary">
-          Comprar ahora
+          Ver productos
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#categorias" class="btn-outline-white">Ver catálogo</a>
+        <a href="#nosotros" class="btn-outline-white">Conocer la marca</a>
+      </div>
+      <div class="hero-trust">
+        <span>✓ Envíos a todo el país</span>
+        <span>✓ Atención por WhatsApp</span>
+        <span>✓ Cambios sin costo</span>
+        <span>✓ Compra segura</span>
       </div>
     </div>
   </div>
@@ -1489,16 +1584,16 @@
     <div class="container">
       <div class="hero-stats">
         <div class="hero-stat">
-          <strong>+500</strong>
-          <span>Clientes felices</span>
-        </div>
-        <div class="hero-stat">
-          <strong>4.9★</strong>
-          <span>Calificación</span>
-        </div>
-        <div class="hero-stat">
           <strong>3–7</strong>
           <span>Días de entrega</span>
+        </div>
+        <div class="hero-stat">
+          <strong>&lt;2 hs</strong>
+          <span>Te respondemos</span>
+        </div>
+        <div class="hero-stat">
+          <strong>100%</strong>
+          <span>Compra segura</span>
         </div>
       </div>
     </div>
@@ -1560,7 +1655,6 @@
         <button class="cat-btn" data-cat="camperas">Camperas</button>
         <button class="cat-btn" data-cat="pantalones">Pantalones</button>
         <button class="cat-btn" data-cat="conjuntos">Conjuntos</button>
-        <button class="cat-btn" data-cat="buzos">Buzos</button>
       </div>
     </div>
 
@@ -1574,7 +1668,6 @@
           <div class="prod-viewers" id="v1"><span class="prod-dot"></span><span class="v-count">8</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(47 reseñas)</span></div>
           <div class="prod-brand">Adidas · AFA</div>
           <div class="prod-name">Camiseta Argentina #10 Premium</div>
           <div class="prod-prices">
@@ -1598,7 +1691,6 @@
           <div class="prod-viewers" id="v2"><span class="prod-dot"></span><span class="v-count">5</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(32 reseñas)</span></div>
           <div class="prod-brand">Everlast</div>
           <div class="prod-name">Remera Térmica Manga Larga</div>
           <div class="prod-prices">
@@ -1623,7 +1715,6 @@
           <div class="prod-viewers" id="v3"><span class="prod-dot"></span><span class="v-count">9</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(38 reseñas)</span></div>
           <div class="prod-brand">Adidas</div>
           <div class="prod-name">Campera con Capucha Zip</div>
           <div class="prod-prices">
@@ -1647,7 +1738,6 @@
           <div class="prod-viewers" id="v4"><span class="prod-dot"></span><span class="v-count">6</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(24 reseñas)</span></div>
           <div class="prod-brand">Everlast</div>
           <div class="prod-name">Campera Bicolor Zip Urbana</div>
           <div class="prod-prices">
@@ -1672,7 +1762,6 @@
           <div class="prod-viewers" id="v5"><span class="prod-dot"></span><span class="v-count">7</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(53 reseñas)</span></div>
           <div class="prod-brand">Nike</div>
           <div class="prod-name">Pantalón Deportivo Swoosh</div>
           <div class="prod-prices">
@@ -1696,7 +1785,6 @@
           <div class="prod-viewers" id="v6"><span class="prod-dot"></span><span class="v-count">4</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(19 reseñas)</span></div>
           <div class="prod-brand">ISU</div>
           <div class="prod-name">Pantalón Training Gris</div>
           <div class="prod-prices">
@@ -1720,7 +1808,6 @@
           <div class="prod-viewers" id="v7"><span class="prod-dot"></span><span class="v-count">5</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(22 reseñas)</span></div>
           <div class="prod-brand">ISU</div>
           <div class="prod-name">Pantalón Training Negro</div>
           <div class="prod-prices">
@@ -1745,7 +1832,6 @@
           <div class="prod-viewers" id="v8"><span class="prod-dot"></span><span class="v-count">12</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(61 reseñas)</span></div>
           <div class="prod-brand">Everlast</div>
           <div class="prod-name">Conjunto Completo Deportivo</div>
           <div class="prod-prices">
@@ -1770,7 +1856,6 @@
           <div class="prod-viewers" id="v9"><span class="prod-dot"></span><span class="v-count">11</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(34 reseñas)</span></div>
           <div class="prod-brand">Nike</div>
           <div class="prod-name">Conjunto Training Nike</div>
           <div class="prod-prices">
@@ -1794,7 +1879,6 @@
           <div class="prod-viewers" id="v10"><span class="prod-dot"></span><span class="v-count">3</span> viendo ahora</div>
         </div>
         <div class="prod-body">
-          <div class="prod-stars">★★★★★ <span>(28 reseñas)</span></div>
           <div class="prod-brand">Everlast</div>
           <div class="prod-name">Pantalón Urban Cordón Amarillo</div>
           <div class="prod-prices">
@@ -1873,121 +1957,71 @@
 </section>
 
 <!-- ════════════════════════════════════════
-     REVIEWS
+     TRUST
 ════════════════════════════════════════ -->
-<section class="reviews-section">
+<section class="trust-section">
   <div class="container">
-
-    <div class="reviews-top">
-      <div>
-        <div class="section-label">Reseñas verificadas</div>
-        <h2 class="section-title">Lo que dicen<br>nuestros clientes.</h2>
-      </div>
-      <div class="reviews-agg reveal">
-        <div class="reviews-score">4.9</div>
-        <div>
-          <div class="reviews-meta-stars">★★★★★</div>
-          <strong class="reviews-meta">Calificación promedio</strong>
-          <span class="reviews-meta">Basado en +300 reseñas</span>
-        </div>
-      </div>
+    <div class="section-head centered">
+      <div class="section-label">Lo que garantizamos</div>
+      <h2 class="section-title">Comprás con<br>respaldo real.</h2>
+      <p class="section-sub">Cada pedido está respaldado por procesos reales, atención real y un equipo que se hace responsable.</p>
     </div>
+    <div class="trust-grid">
 
-    <div class="reviews-grid">
-
-      <div class="review-card reveal">
-        <div class="review-head">
-          <div class="review-avatar">M</div>
-          <div>
-            <div class="review-name">Martín G.</div>
-            <div class="review-prod">Campera Adidas Pro</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Calidad increíble. Llegó en 3 días, el empaque impecable y el material es exactamente como las fotos. La recomiendo 100%. Ya pedí la segunda."</p>
+      <div class="trust-card reveal">
+        <div class="trust-icon">📦</div>
+        <h3>Productos revisados</h3>
+        <p>Antes de despachar revisamos cada prenda. Lo que ves en la foto es exactamente lo que recibís, sin sorpresas.</p>
       </div>
 
-      <div class="review-card reveal d1">
-        <div class="review-head">
-          <div class="review-avatar">V</div>
-          <div>
-            <div class="review-name">Valentina R.</div>
-            <div class="review-prod">Camiseta Argentina</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Tal cual a la foto, los colores son hermosos y el talle es perfecto. La calidad se nota desde que abrís el paquete. Ya pedí la segunda."</p>
+      <div class="trust-card reveal d1">
+        <div class="trust-icon">🔁</div>
+        <h3>Cambios sin costo</h3>
+        <p>Si algo no te queda bien, coordinamos el cambio por WhatsApp dentro de los 10 días. Sin vueltas ni gastos extra.</p>
       </div>
 
-      <div class="review-card reveal d2">
-        <div class="review-head">
-          <div class="review-avatar">L</div>
-          <div>
-            <div class="review-name">Lucas P.</div>
-            <div class="review-prod">Conjunto Nike Training</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"La mejor compra que hice. Calidad premium, muy cómodo para entrenar. El conjunto es exactamente lo que estaba buscando. 10/10."</p>
+      <div class="trust-card reveal d2">
+        <div class="trust-icon">🚚</div>
+        <h3>Envíos con seguimiento</h3>
+        <p>Despachamos en 24–48 hs y te compartimos el número de seguimiento para que sepas dónde está tu pedido.</p>
       </div>
 
-      <div class="review-card reveal">
-        <div class="review-head">
-          <div class="review-avatar">S</div>
-          <div>
-            <div class="review-name">Sofía M.</div>
-            <div class="review-prod">Pantalón Nike Cargo</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"El cambio de talle fue súper fácil. Me respondieron por WhatsApp al instante y en 2 días tenía la prenda correcta. Excelente atención."</p>
+      <div class="trust-card reveal d3">
+        <div class="trust-icon">💬</div>
+        <h3>Atención personalizada</h3>
+        <p>Respondemos por WhatsApp en menos de 2 horas. Hay una persona real del otro lado, siempre.</p>
       </div>
 
-      <div class="review-card reveal d1">
-        <div class="review-head">
-          <div class="review-avatar">D</div>
-          <div>
-            <div class="review-name">Diego C.</div>
-            <div class="review-prod">Buzo Darlon Urban</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Llegó bien embalado, el material es premium. Mismo que las fotos, sin sorpresas. Me encantó la atención y la rapidez del envío."</p>
+      <div class="trust-card reveal">
+        <div class="trust-icon">🔒</div>
+        <h3>Compra 100% segura</h3>
+        <p>El pago es procesado por Mercado Pago. No almacenamos datos de tarjeta. El checkout es seguro y cifrado.</p>
       </div>
 
-      <div class="review-card reveal d2">
-        <div class="review-head">
-          <div class="review-avatar">A</div>
-          <div>
-            <div class="review-name">Agustina F.</div>
-            <div class="review-prod">Campera Everlast</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Súper cómoda y abrigada. El diseño es hermoso y la calidad supera las expectativas. Definitivamente compraré de nuevo en URBANSET."</p>
+      <div class="trust-card reveal d1">
+        <div class="trust-icon">✨</div>
+        <h3>Calidad seleccionada</h3>
+        <p>Elegimos cada producto con criterio propio. Nada de ropa genérica. Solo prendas que nosotros mismos usaríamos.</p>
       </div>
 
     </div>
+  </div>
+</section>
 
-    <div class="reviews-stats">
-      <div class="reviews-stat reveal">
-        <strong>+500</strong>
-        <span>Pedidos entregados</span>
-      </div>
-      <div class="reviews-stat reveal d1">
-        <strong>4.9★</strong>
-        <span>Calificación promedio</span>
-      </div>
-      <div class="reviews-stat reveal d2">
-        <strong>98%</strong>
-        <span>Clientes satisfechos</span>
-      </div>
-      <div class="reviews-stat reveal d3">
-        <strong>&lt;2 hs</strong>
-        <span>Tiempo de respuesta</span>
-      </div>
+<!-- ════════════════════════════════════════
+     BRAND STORY
+════════════════════════════════════════ -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-inner reveal">
+      <div class="story-label">Nuestra historia</div>
+      <blockquote class="story-quote">
+        URBANSET nació de una idea simple: <strong>que la ropa deportiva no tiene que ser cara para verse bien.</strong><br><br>
+        Somos un equipo pequeño que selecciona cada prenda con cuidado, revisa la calidad antes del envío y responde cada mensaje como si fuera el primero.<br><br>
+        No tenemos almacenes llenos de stock genérico. Tenemos criterio y las ganas de construir algo que dure. Cada compra nos ayuda a seguir creciendo — y por eso tratamos cada pedido con el mismo respeto que quisiéramos recibir.
+      </blockquote>
+      <div class="story-sig">— El equipo de URBANSET</div>
     </div>
-
   </div>
 </section>
 
@@ -2109,7 +2143,27 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-a">
-          Sí, sin dudas. Todas las prendas son revisadas antes de ser despachadas. Las fotos que ves son de los productos reales, sin filtros ni edición. Lo que ves es exactamente lo que recibís.
+          Sí. Todas las prendas son revisadas antes de ser despachadas. Las fotos que ves son de los productos reales, sin filtros ni edición exagerada. Lo que ves es exactamente lo que recibís.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Cómo hago una compra?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Es muy simple: elegí el producto, hacé click en "Comprar ahora", seleccioná tu talle y finalizá el pago con Mercado Pago. Si tenés dudas antes de comprar, podés escribirnos por WhatsApp y te asesoramos sin compromiso.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Puedo consultar antes de comprar?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Por supuesto. Escribinos por WhatsApp o Instagram y te respondemos en menos de 2 horas. Podemos asesorarte sobre talles, disponibilidad o cualquier duda que tengas sobre las prendas.
         </div>
       </div>
 
@@ -2156,8 +2210,9 @@
         <ul class="footer-col-links">
           <li><a href="#faq">Preguntas frecuentes</a></li>
           <li><a href="#faq">Guía de talles</a></li>
-          <li><a href="#faq">Política de cambios</a></li>
           <li><a href="#faq">Información de envíos</a></li>
+          <li><a href="#faq">Política de cambios</a></li>
+          <li><a href="#faq">Política de privacidad</a></li>
         </ul>
       </div>
 
@@ -2189,7 +2244,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 URBANSET. Todos los derechos reservados.</p>
+      <p class="footer-copy">© 2026 URBANSET. Todos los derechos reservados.</p>
       <div class="footer-pays">
         <span class="footer-pay">Visa</span>
         <span class="footer-pay">Mastercard</span>
