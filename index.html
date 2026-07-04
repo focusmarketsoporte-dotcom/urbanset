@@ -49,6 +49,7 @@
   a { text-decoration: none; color: inherit; }
   button { cursor: pointer; border: none; background: none; font-family: inherit; }
   .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  :focus-visible { outline: 2px solid var(--dark); outline-offset: 3px; border-radius: 2px; }
 
   /* ============================================================
      ANNOUNCEMENT BAR
@@ -1475,17 +1476,17 @@
 <div class="ann-bar" aria-label="Información de envíos y garantía">
   <div class="ann-track">
     <span>🚚 Envíos a todo el país</span>
-    <span>🔁 Cambios fáciles sin vueltas</span>
-    <span>🔒 Pago 100% seguro</span>
-    <span>⚡ Entrega rápida</span>
-    <span>🏆 Calidad premium garantizada</span>
-    <span>📦 Más de 500 pedidos entregados</span>
+    <span>🔁 Cambios sin costo en 10 días</span>
+    <span>🔒 Pago seguro con Mercado Pago</span>
+    <span>💬 Respondemos en menos de 2 hs</span>
+    <span>✅ Prendas revisadas antes del envío</span>
+    <span>📐 Asesoramiento de talle personalizado</span>
     <span>🚚 Envíos a todo el país</span>
-    <span>🔁 Cambios fáciles sin vueltas</span>
-    <span>🔒 Pago 100% seguro</span>
-    <span>⚡ Entrega rápida</span>
-    <span>🏆 Calidad premium garantizada</span>
-    <span>📦 Más de 500 pedidos entregados</span>
+    <span>🔁 Cambios sin costo en 10 días</span>
+    <span>🔒 Pago seguro con Mercado Pago</span>
+    <span>💬 Respondemos en menos de 2 hs</span>
+    <span>✅ Prendas revisadas antes del envío</span>
+    <span>📐 Asesoramiento de talle personalizado</span>
   </div>
 </div>
 
@@ -1607,10 +1608,10 @@
   <div class="container">
     <div class="benefits-grid">
       <div class="benefit-item reveal">
-        <div class="benefit-icon">🏆</div>
+        <div class="benefit-icon">✅</div>
         <div class="benefit-text">
-          <strong>Calidad Premium</strong>
-          <span>Materiales resistentes y cómodos</span>
+          <strong>Calidad controlada</strong>
+          <span>Cada prenda revisada antes del envío</span>
         </div>
       </div>
       <div class="benefit-item reveal d1">
@@ -1664,8 +1665,7 @@
       <article class="prod-card reveal" data-cat="camisetas">
         <div class="prod-img-wrap">
           <img src="prod-camiseta-argentina.png" alt="Camiseta Argentina #10" loading="lazy">
-          <div class="prod-badge">⚡ Más vendido</div>
-          <div class="prod-viewers" id="v1"><span class="prod-dot"></span><span class="v-count">8</span> viendo ahora</div>
+
         </div>
         <div class="prod-body">
           <div class="prod-brand">Adidas · AFA</div>
@@ -1675,8 +1675,8 @@
             <span class="prod-price-old">$24.000</span>
             <span class="prod-discount">−25%</span>
           </div>
-          <div class="prod-stock">
-            <span class="prod-stock-dot"></span>Últimas 6 unidades
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>Disponible
           </div>
           <button class="prod-buy" onclick="abrirModalMP('Camiseta Argentina #10',18000,'prod-camiseta-argentina.png','Adidas · AFA')">
             <img src="mp-logo.webp" alt="MP"> Comprar ahora
@@ -1688,7 +1688,6 @@
       <article class="prod-card reveal d1" data-cat="camisetas">
         <div class="prod-img-wrap">
           <img src="prod-remera-everlast.png" alt="Remera Térmica Everlast" loading="lazy">
-          <div class="prod-viewers" id="v2"><span class="prod-dot"></span><span class="v-count">5</span> viendo ahora</div>
         </div>
         <div class="prod-body">
           <div class="prod-brand">Everlast</div>
@@ -1711,8 +1710,7 @@
       <article class="prod-card reveal d2" data-cat="camperas">
         <div class="prod-img-wrap">
           <img src="prod-campera-adidas.jpeg" alt="Campera Adidas" loading="lazy">
-          <div class="prod-badge nuevo">Nuevo</div>
-          <div class="prod-viewers" id="v3"><span class="prod-dot"></span><span class="v-count">9</span> viendo ahora</div>
+
         </div>
         <div class="prod-body">
           <div class="prod-brand">Adidas</div>
@@ -1735,7 +1733,6 @@
       <article class="prod-card reveal d3" data-cat="camperas">
         <div class="prod-img-wrap">
           <img src="prod-campera-everlast.png" alt="Campera Everlast" loading="lazy">
-          <div class="prod-viewers" id="v4"><span class="prod-dot"></span><span class="v-count">6</span> viendo ahora</div>
         </div>
         <div class="prod-body">
           <div class="prod-brand">Everlast</div>
@@ -1758,8 +1755,7 @@
       <article class="prod-card reveal" data-cat="pantalones">
         <div class="prod-img-wrap">
           <img src="prod-pantalon-nike.png" alt="Pantalón Nike" loading="lazy">
-          <div class="prod-badge">⚡ Más vendido</div>
-          <div class="prod-viewers" id="v5"><span class="prod-dot"></span><span class="v-count">7</span> viendo ahora</div>
+
         </div>
         <div class="prod-body">
           <div class="prod-brand">Nike</div>
@@ -1769,8 +1765,8 @@
             <span class="prod-price-old">$42.000</span>
             <span class="prod-discount">−24%</span>
           </div>
-          <div class="prod-stock">
-            <span class="prod-stock-dot"></span>Últimas 8 unidades
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>Disponible
           </div>
           <button class="prod-buy" onclick="abrirModalMP('Pantalón Nike Swoosh',32000,'prod-pantalon-nike.png','Nike')">
             <img src="mp-logo.webp" alt="MP"> Comprar ahora
@@ -1782,7 +1778,6 @@
       <article class="prod-card reveal d1" data-cat="pantalones">
         <div class="prod-img-wrap">
           <img src="prod-pantalon-isu-gris.png" alt="Pantalón ISU Gris" loading="lazy">
-          <div class="prod-viewers" id="v6"><span class="prod-dot"></span><span class="v-count">4</span> viendo ahora</div>
         </div>
         <div class="prod-body">
           <div class="prod-brand">ISU</div>
@@ -1805,7 +1800,6 @@
       <article class="prod-card reveal d2" data-cat="pantalones">
         <div class="prod-img-wrap">
           <img src="prod-pantalon-isu-negro.png" alt="Pantalón ISU Negro" loading="lazy">
-          <div class="prod-viewers" id="v7"><span class="prod-dot"></span><span class="v-count">5</span> viendo ahora</div>
         </div>
         <div class="prod-body">
           <div class="prod-brand">ISU</div>
@@ -1828,8 +1822,7 @@
       <article class="prod-card reveal d3" data-cat="conjuntos">
         <div class="prod-img-wrap">
           <img src="prod-conjunto-everlast.jpeg" alt="Conjunto Everlast" loading="lazy">
-          <div class="prod-badge oferta">🔥 Oferta</div>
-          <div class="prod-viewers" id="v8"><span class="prod-dot"></span><span class="v-count">12</span> viendo ahora</div>
+
         </div>
         <div class="prod-body">
           <div class="prod-brand">Everlast</div>
@@ -1839,8 +1832,8 @@
             <span class="prod-price-old">$64.000</span>
             <span class="prod-discount">−25%</span>
           </div>
-          <div class="prod-stock">
-            <span class="prod-stock-dot"></span>Últimas 4 unidades
+          <div class="prod-stock ok">
+            <span class="prod-stock-dot"></span>Disponible
           </div>
           <button class="prod-buy" onclick="abrirModalMP('Conjunto Everlast Completo',48000,'prod-conjunto-everlast.jpeg','Everlast')">
             <img src="mp-logo.webp" alt="MP"> Comprar ahora
@@ -1852,8 +1845,7 @@
       <article class="prod-card reveal" data-cat="conjuntos">
         <div class="prod-img-wrap">
           <img src="prod-conjunto-nike.jpeg" alt="Conjunto Nike" loading="lazy">
-          <div class="prod-badge nuevo">Nuevo</div>
-          <div class="prod-viewers" id="v9"><span class="prod-dot"></span><span class="v-count">11</span> viendo ahora</div>
+
         </div>
         <div class="prod-body">
           <div class="prod-brand">Nike</div>
@@ -1876,7 +1868,6 @@
       <article class="prod-card reveal d1" data-cat="pantalones">
         <div class="prod-img-wrap">
           <img src="prod-pantalon-everlast.jpeg" alt="Pantalón Everlast" loading="lazy">
-          <div class="prod-viewers" id="v10"><span class="prod-dot"></span><span class="v-count">3</span> viendo ahora</div>
         </div>
         <div class="prod-body">
           <div class="prod-brand">Everlast</div>
@@ -2016,9 +2007,10 @@
     <div class="story-inner reveal">
       <div class="story-label">Nuestra historia</div>
       <blockquote class="story-quote">
-        URBANSET nació de una idea simple: <strong>que la ropa deportiva no tiene que ser cara para verse bien.</strong><br><br>
-        Somos un equipo pequeño que selecciona cada prenda con cuidado, revisa la calidad antes del envío y responde cada mensaje como si fuera el primero.<br><br>
-        No tenemos almacenes llenos de stock genérico. Tenemos criterio y las ganas de construir algo que dure. Cada compra nos ayuda a seguir creciendo — y por eso tratamos cada pedido con el mismo respeto que quisiéramos recibir.
+        Empezamos hartos de ver tiendas que venden ropa deportiva con fotos bonitas pero calidad mediocre.<br><br>
+        Quisimos hacer algo diferente: <strong>una marca pequeña y honesta, que elige cada prenda como si fuera para nosotros mismos.</strong><br><br>
+        No tenemos cientos de productos ni depósitos gigantes. Tenemos criterio, atención real y las ganas de construir algo que valga la pena.<br><br>
+        UrbanSet recién está empezando. Pero desde el primer pedido, lo hacemos con cuidado. Si comprás, te lo agradecemos de verdad.
       </blockquote>
       <div class="story-sig">— El equipo de URBANSET</div>
     </div>
@@ -2229,7 +2221,7 @@
               @urbanset_ar
             </a>
           </li>
-          <li><a href="mailto:urbanset.tienda@gmail.com">Email</a></li>
+          <li><a href="mailto:urbanset.tienda@gmail.com">urbanset.tienda@gmail.com</a></li>
         </ul>
         <div style="margin-top:24px;">
           <a href="https://wa.me/5492213543509?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
@@ -2562,16 +2554,6 @@ var revealObs = new IntersectionObserver(function(entries) {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
 
-/* ══════════════════════════════════════════
-   VIEWERS COUNTER
-══════════════════════════════════════════ */
-function randomViewers(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-function updateViewers() {
-  document.querySelectorAll('.prod-viewers .v-count').forEach(function(el) {
-    el.textContent = randomViewers(2, 14);
-  });
-}
-setInterval(updateViewers, 18000);
 
 /* ══════════════════════════════════════════
    RIPPLE EFFECT
