@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
     }
 
     const titulo = nombre + (talle ? ' — Talle ' + talle : '');
-    const siteUrl = 'https://urbanset.vercel.app';
+    const siteUrl = 'https://urbanset-rho.vercel.app';
 
     const preference = {
         items: [{
