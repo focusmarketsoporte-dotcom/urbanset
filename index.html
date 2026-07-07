@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>URBANSET — Ropa Deportiva Premium</title>
   <meta name="description" content="Ropa deportiva premium: camisetas, camperas, conjuntos y pantalones. Calidad real. Envío a todo el país.">
+  <meta name="keywords" content="campera hombre, campera premium, pantalón deportivo, pantalón hombre, jogger premium, camiseta argentina, camiseta premium, camiseta deportiva, ropa deportiva, urbanset">
   <meta property="og:title" content="URBANSET — Ropa Deportiva Premium">
-  <meta property="og:description" content="Entrená, salí y verte mejor todos los días. Calidad real, envío a todo el país.">
-  <meta property="og:image" content="foto-hero.jpeg">
+  <meta property="og:description" content="Ropa deportiva premium: camisetas, camperas, conjuntos y pantalones. Calidad real. Envío a todo el país.">
+  <meta property="og:image" content="prod-campera-premium-gris-negro.png">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#0a0a0a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -659,6 +660,27 @@
     font-weight: 700;
     color: var(--text);
     line-height: 1.3;
+  }
+  .prod-desc {
+    font-size: .72rem;
+    color: var(--mid);
+    line-height: 1.55;
+  }
+  .prod-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .prod-tags span {
+    font-size: .56rem;
+    font-weight: 600;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    color: var(--mid);
+    background: var(--off);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: 100px;
   }
   .prod-prices {
     display: flex;
@@ -1551,7 +1573,7 @@
 ════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="prod-camiseta-arg-modelo.jpeg" alt="Ropa deportiva premium URBANSET" fetchpriority="high">
+    <img src="prod-campera-premium-gris-negro.png" alt="Ropa deportiva premium URBANSET" fetchpriority="high">
   </div>
   <div class="hero-overlay"></div>
   <div class="container">
@@ -1661,227 +1683,147 @@
 
     <div class="products-grid" id="productsGrid">
 
-      <!-- 1 — Camiseta Argentina #10 -->
-      <article class="prod-card reveal" data-cat="camisetas">
+      <!-- 1 — Campera Premium Hombre con Capucha Gris Melange y Negro -->
+      <article class="prod-card reveal" data-cat="camperas">
         <div class="prod-img-wrap">
-          <img src="prod-camiseta-argentina.png" alt="Camiseta Argentina #10" loading="lazy">
-
+          <img src="prod-campera-premium-gris-negro.png" alt="Campera Premium Hombre con Capucha Gris Melange y Negro" loading="lazy">
         </div>
         <div class="prod-body">
-          <div class="prod-brand">Adidas · AFA</div>
-          <div class="prod-name">Camiseta Argentina #10 Premium</div>
-          <div class="prod-prices">
-            <span class="prod-price">$18.000</span>
-            <span class="prod-price-old">$24.000</span>
-            <span class="prod-discount">−25%</span>
+          <div class="prod-brand">UrbanSet Premium</div>
+          <div class="prod-name">Campera Premium Hombre con Capucha Gris Melange y Negro</div>
+          <p class="prod-desc">Campera de estilo deportivo confeccionada con materiales de excelente calidad. Su diseño moderno combina paneles en gris melange con mangas y capucha en negro, ofreciendo comodidad y un look urbano para el uso diario.</p>
+          <div class="prod-tags">
+            <span>Tela premium</span>
+            <span>Capucha ajustable</span>
+            <span>Cierre completo</span>
+            <span>Bolsillos funcionales</span>
+            <span>Calce cómodo</span>
+            <span>Diseño urbano</span>
           </div>
-          <div class="prod-stock ok">
-            <span class="prod-stock-dot"></span>Disponible
-          </div>
-          <button class="prod-buy" onclick="abrirModalMP('Camiseta Argentina #10',18000,'prod-camiseta-argentina.png','Adidas · AFA')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
-          </button>
-        </div>
-      </article>
-
-      <!-- 2 — Remera Térmica Everlast -->
-      <article class="prod-card reveal d1" data-cat="camisetas">
-        <div class="prod-img-wrap">
-          <img src="prod-remera-everlast.png" alt="Remera Térmica Everlast" loading="lazy">
-        </div>
-        <div class="prod-body">
-          <div class="prod-brand">Everlast</div>
-          <div class="prod-name">Remera Térmica Manga Larga</div>
           <div class="prod-prices">
-            <span class="prod-price">$14.000</span>
-            <span class="prod-price-old">$18.000</span>
-            <span class="prod-discount">−22%</span>
+            <span class="prod-price">Precio a confirmar</span>
           </div>
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" onclick="abrirModalMP('Remera Térmica Everlast',14000,'prod-remera-everlast.png','Everlast')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          <button class="prod-buy" disabled style="opacity:.55;cursor:not-allowed;">
+            Muy pronto
           </button>
         </div>
       </article>
 
-      <!-- 3 — Campera Adidas -->
-      <article class="prod-card reveal d2" data-cat="camperas">
-        <div class="prod-img-wrap">
-          <img src="prod-campera-adidas.jpeg" alt="Campera Adidas" loading="lazy">
-
-        </div>
-        <div class="prod-body">
-          <div class="prod-brand">Adidas</div>
-          <div class="prod-name">Campera con Capucha Zip</div>
-          <div class="prod-prices">
-            <span class="prod-price">$45.000</span>
-            <span class="prod-price-old">$60.000</span>
-            <span class="prod-discount">−25%</span>
-          </div>
-          <div class="prod-stock ok">
-            <span class="prod-stock-dot"></span>En stock
-          </div>
-          <button class="prod-buy" onclick="abrirModalMP('Campera Adidas Zip',45000,'prod-campera-adidas.jpeg','Adidas')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
-          </button>
-        </div>
-      </article>
-
-      <!-- 4 — Campera Everlast -->
-      <article class="prod-card reveal d3" data-cat="camperas">
-        <div class="prod-img-wrap">
-          <img src="prod-campera-everlast.png" alt="Campera Everlast" loading="lazy">
-        </div>
-        <div class="prod-body">
-          <div class="prod-brand">Everlast</div>
-          <div class="prod-name">Campera Bicolor Zip Urbana</div>
-          <div class="prod-prices">
-            <span class="prod-price">$36.000</span>
-            <span class="prod-price-old">$48.000</span>
-            <span class="prod-discount">−25%</span>
-          </div>
-          <div class="prod-stock ok">
-            <span class="prod-stock-dot"></span>En stock
-          </div>
-          <button class="prod-buy" onclick="abrirModalMP('Campera Everlast Bicolor',36000,'prod-campera-everlast.png','Everlast')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
-          </button>
-        </div>
-      </article>
-
-      <!-- 5 — Pantalón Nike -->
-      <article class="prod-card reveal" data-cat="pantalones">
-        <div class="prod-img-wrap">
-          <img src="prod-pantalon-nike.png" alt="Pantalón Nike" loading="lazy">
-
-        </div>
-        <div class="prod-body">
-          <div class="prod-brand">Nike</div>
-          <div class="prod-name">Pantalón Deportivo Swoosh</div>
-          <div class="prod-prices">
-            <span class="prod-price">$32.000</span>
-            <span class="prod-price-old">$42.000</span>
-            <span class="prod-discount">−24%</span>
-          </div>
-          <div class="prod-stock ok">
-            <span class="prod-stock-dot"></span>Disponible
-          </div>
-          <button class="prod-buy" onclick="abrirModalMP('Pantalón Nike Swoosh',32000,'prod-pantalon-nike.png','Nike')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
-          </button>
-        </div>
-      </article>
-
-      <!-- 6 — Pantalón ISU Gris -->
+      <!-- 2 — Pantalón Deportivo Premium Hombre Negro -->
       <article class="prod-card reveal d1" data-cat="pantalones">
         <div class="prod-img-wrap">
-          <img src="prod-pantalon-isu-gris.png" alt="Pantalón ISU Gris" loading="lazy">
+          <img src="prod-pantalon-premium-negro.png" alt="Pantalón Deportivo Premium Hombre Negro" loading="lazy">
         </div>
         <div class="prod-body">
-          <div class="prod-brand">ISU</div>
-          <div class="prod-name">Pantalón Training Gris</div>
+          <div class="prod-brand">UrbanSet Premium</div>
+          <div class="prod-name">Pantalón Deportivo Premium Hombre Negro</div>
+          <p class="prod-desc">Pantalón deportivo de estilo urbano confeccionado con materiales de excelente calidad. Diseñado para brindar comodidad durante todo el día, cuenta con cintura elastizada, cordón regulable y bolsillos laterales. Ideal para entrenar, salir o utilizar diariamente.</p>
+          <div class="prod-tags">
+            <span>Tela premium</span>
+            <span>Cintura elastizada</span>
+            <span>Cordón regulable</span>
+            <span>Bolsillos laterales</span>
+            <span>Calce cómodo</span>
+            <span>Diseño urbano</span>
+          </div>
           <div class="prod-prices">
-            <span class="prod-price">$26.000</span>
-            <span class="prod-price-old">$34.000</span>
-            <span class="prod-discount">−24%</span>
+            <span class="prod-price">Precio a confirmar</span>
           </div>
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" onclick="abrirModalMP('Pantalón ISU Gris',26000,'prod-pantalon-isu-gris.png','ISU')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          <button class="prod-buy" disabled style="opacity:.55;cursor:not-allowed;">
+            Muy pronto
           </button>
         </div>
       </article>
 
-      <!-- 7 — Pantalón ISU Negro -->
+      <!-- 3 — Pantalón Deportivo Premium Urban -->
       <article class="prod-card reveal d2" data-cat="pantalones">
         <div class="prod-img-wrap">
-          <img src="prod-pantalon-isu-negro.png" alt="Pantalón ISU Negro" loading="lazy">
+          <img src="prod-pantalon-premium-urban.png" alt="Pantalón Deportivo Premium Urban" loading="lazy">
         </div>
         <div class="prod-body">
-          <div class="prod-brand">ISU</div>
-          <div class="prod-name">Pantalón Training Negro</div>
+          <div class="prod-brand">UrbanSet Premium</div>
+          <div class="prod-name">Pantalón Deportivo Premium Urban</div>
+          <p class="prod-desc">Combina materiales de excelente calidad con un diseño inspirado en las últimas tendencias deportivas y urbanas. Su calce cómodo, cintura elastizada con cordón regulable y bolsillos funcionales lo convierten en la opción ideal para entrenar, salir o disfrutar del día a día.</p>
+          <div class="prod-tags">
+            <span>Tela premium</span>
+            <span>Cintura elastizada</span>
+            <span>Cordón regulable</span>
+            <span>Bolsillos laterales</span>
+            <span>Calce cómodo</span>
+            <span>Diseño urbano</span>
+          </div>
           <div class="prod-prices">
-            <span class="prod-price">$24.000</span>
-            <span class="prod-price-old">$32.000</span>
-            <span class="prod-discount">−25%</span>
+            <span class="prod-price">Precio a confirmar</span>
           </div>
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" onclick="abrirModalMP('Pantalón ISU Negro',24000,'prod-pantalon-isu-negro.png','ISU')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          <button class="prod-buy" disabled style="opacity:.55;cursor:not-allowed;">
+            Muy pronto
           </button>
         </div>
       </article>
 
-      <!-- 8 — Conjunto Everlast -->
+      <!-- 4 — Conjunto Deportivo Premium -->
       <article class="prod-card reveal d3" data-cat="conjuntos">
         <div class="prod-img-wrap">
-          <img src="prod-conjunto-everlast.jpeg" alt="Conjunto Everlast" loading="lazy">
-
+          <img src="prod-conjunto-premium.png" alt="Conjunto Deportivo Premium" loading="lazy">
         </div>
         <div class="prod-body">
-          <div class="prod-brand">Everlast</div>
-          <div class="prod-name">Conjunto Completo Deportivo</div>
-          <div class="prod-prices">
-            <span class="prod-price">$48.000</span>
-            <span class="prod-price-old">$64.000</span>
-            <span class="prod-discount">−25%</span>
+          <div class="prod-brand">UrbanSet Premium</div>
+          <div class="prod-name">Conjunto Deportivo Premium</div>
+          <p class="prod-desc">Renová tu estilo con los conjuntos deportivos premium de UrbanSet. Podés elegir entre Campera + Pantalón o Remera Térmica + Pantalón. Cada prenda fue seleccionada por su excelente calidad, comodidad y diseño moderno.</p>
+          <div class="prod-tags">
+            <span>Calidad premium</span>
+            <span>Tela resistente</span>
+            <span>Excelente calce</span>
+            <span>Talles reales</span>
+            <span>Diseño moderno</span>
+            <span>Ideal uso diario</span>
           </div>
-          <div class="prod-stock ok">
-            <span class="prod-stock-dot"></span>Disponible
-          </div>
-          <button class="prod-buy" onclick="abrirModalMP('Conjunto Everlast Completo',48000,'prod-conjunto-everlast.jpeg','Everlast')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
-          </button>
-        </div>
-      </article>
-
-      <!-- 9 — Conjunto Nike -->
-      <article class="prod-card reveal" data-cat="conjuntos">
-        <div class="prod-img-wrap">
-          <img src="prod-conjunto-nike.jpeg" alt="Conjunto Nike" loading="lazy">
-
-        </div>
-        <div class="prod-body">
-          <div class="prod-brand">Nike</div>
-          <div class="prod-name">Conjunto Training Nike</div>
           <div class="prod-prices">
-            <span class="prod-price">$52.000</span>
-            <span class="prod-price-old">$68.000</span>
-            <span class="prod-discount">−24%</span>
+            <span class="prod-price">Precio a confirmar</span>
           </div>
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" onclick="abrirModalMP('Conjunto Nike Training',52000,'prod-conjunto-nike.jpeg','Nike')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          <button class="prod-buy" disabled style="opacity:.55;cursor:not-allowed;">
+            Muy pronto
           </button>
         </div>
       </article>
 
-      <!-- 10 — Pantalón Everlast -->
-      <article class="prod-card reveal d1" data-cat="pantalones">
+      <!-- 5 — Camiseta Premium Estilo Selección Argentina G5 -->
+      <article class="prod-card reveal" data-cat="camisetas">
         <div class="prod-img-wrap">
-          <img src="prod-pantalon-everlast.jpeg" alt="Pantalón Everlast" loading="lazy">
+          <img src="prod-camiseta-premium-arg.png" alt="Camiseta Premium Estilo Selección Argentina G5" loading="lazy">
         </div>
         <div class="prod-body">
-          <div class="prod-brand">Everlast</div>
-          <div class="prod-name">Pantalón Urban Cordón Amarillo</div>
+          <div class="prod-brand">UrbanSet Premium</div>
+          <div class="prod-name">Camiseta Premium Estilo Selección Argentina G5</div>
+          <p class="prod-desc">Inspirada en una de las camisetas más icónicas del fútbol, esta versión G5 Premium combina diseño, comodidad y excelentes terminaciones para vestir con estilo dentro y fuera de la cancha. Tela liviana y respirable, con detalles termosellados y calce deportivo.</p>
+          <div class="prod-tags">
+            <span>Calidad G5</span>
+            <span>Tela liviana</span>
+            <span>Detalles termosellados</span>
+            <span>Costuras reforzadas</span>
+            <span>Calce deportivo</span>
+            <span>Diseño moderno</span>
+          </div>
           <div class="prod-prices">
-            <span class="prod-price">$28.000</span>
-            <span class="prod-price-old">$36.000</span>
-            <span class="prod-discount">−22%</span>
+            <span class="prod-price">Precio a confirmar</span>
           </div>
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" onclick="abrirModalMP('Pantalón Everlast Urban',28000,'prod-pantalon-everlast.jpeg','Everlast')">
-            <img src="mp-logo.webp" alt="MP"> Comprar ahora
+          <button class="prod-buy" disabled style="opacity:.55;cursor:not-allowed;">
+            Muy pronto
           </button>
         </div>
       </article>
@@ -2030,7 +1972,7 @@
     <div class="cat-grid">
 
       <a href="#productos" class="cat-tile reveal" data-filter="camisetas">
-        <img src="prod-camiseta-argentina.png" alt="Camisetas" loading="lazy">
+        <img src="prod-camiseta-premium-arg.png" alt="Camisetas" loading="lazy">
         <div class="cat-tile-overlay"></div>
         <div class="cat-tile-label">
           <span>Explorar</span>
@@ -2039,7 +1981,7 @@
       </a>
 
       <a href="#productos" class="cat-tile reveal d1" data-filter="camperas">
-        <img src="prod-campera-adidas.jpeg" alt="Camperas" loading="lazy">
+        <img src="prod-campera-premium-gris-negro.png" alt="Camperas" loading="lazy">
         <div class="cat-tile-overlay"></div>
         <div class="cat-tile-label">
           <span>Explorar</span>
@@ -2048,7 +1990,7 @@
       </a>
 
       <a href="#productos" class="cat-tile reveal d2" data-filter="pantalones">
-        <img src="prod-pantalon-nike.png" alt="Pantalones" loading="lazy">
+        <img src="prod-pantalon-premium-negro.png" alt="Pantalones" loading="lazy">
         <div class="cat-tile-overlay"></div>
         <div class="cat-tile-label">
           <span>Explorar</span>
@@ -2057,7 +1999,7 @@
       </a>
 
       <a href="#productos" class="cat-tile reveal d3" data-filter="conjuntos">
-        <img src="prod-conjunto-everlast.jpeg" alt="Conjuntos" loading="lazy">
+        <img src="prod-conjunto-premium.png" alt="Conjuntos" loading="lazy">
         <div class="cat-tile-overlay"></div>
         <div class="cat-tile-label">
           <span>Explorar</span>
@@ -2066,7 +2008,7 @@
       </a>
 
       <a href="#productos" class="cat-tile reveal d4" data-filter="camisetas">
-        <img src="prod-camiseta-arg-modelo.jpeg" alt="Outfits" loading="lazy">
+        <img src="prod-campera-premium-gris-negro.png" alt="Outfits" loading="lazy">
         <div class="cat-tile-overlay"></div>
         <div class="cat-tile-label">
           <span>Explorar</span>
