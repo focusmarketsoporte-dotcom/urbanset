@@ -1832,13 +1832,13 @@
             <span>Diseño urbano</span>
           </div>
           <div class="prod-prices">
-            <span class="prod-price">Precio a confirmar</span>
+            <span class="prod-price">$29.990</span>
           </div>
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" disabled style="opacity:.55;cursor:not-allowed;">
-            Muy pronto
+          <button class="prod-buy" onclick="abrirModalMP('Campera Premium Hombre con Capucha Gris Melange y Negro',29990,'prod-campera-premium-gris-negro.webp','UrbanSet Premium')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
           </button>
         </div>
       </article>
@@ -2442,6 +2442,27 @@
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
+
+<!-- ════════════════════════════════════════
+     DATOS ESTRUCTURADOS (SCHEMA.ORG PRODUCT)
+════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Campera Premium Hombre con Capucha Gris Melange y Negro",
+  "image": "https://urbanset-rho.vercel.app/prod-campera-premium-gris-negro.webp",
+  "description": "Campera de estilo deportivo confeccionada con materiales de excelente calidad. Su diseño moderno combina paneles en gris melange con mangas y capucha en negro, ofreciendo comodidad y un look urbano para el uso diario.",
+  "brand": { "@type": "Brand", "name": "UrbanSet" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://urbanset-rho.vercel.app/#productos",
+    "priceCurrency": "ARS",
+    "price": "29990",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
 
 <!-- ════════════════════════════════════════
      JAVASCRIPT
