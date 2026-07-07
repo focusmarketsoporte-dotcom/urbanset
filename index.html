@@ -1876,13 +1876,13 @@
             <span>Diseño urbano</span>
           </div>
           <div class="prod-prices">
-            <span class="prod-price">Precio a confirmar</span>
+            <span class="prod-price">$25.000</span>
           </div>
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" disabled style="opacity:.55;cursor:not-allowed;">
-            Muy pronto
+          <button class="prod-buy" onclick="abrirModalMP('Pantalón Deportivo Premium Hombre Negro',25000,'prod-pantalon-premium-negro.webp','UrbanSet Premium')">
+            <img src="mp-logo.webp" alt="MP"> Comprar ahora
           </button>
         </div>
       </article>
@@ -2459,6 +2459,23 @@
     "url": "https://urbanset-rho.vercel.app/#productos",
     "priceCurrency": "ARS",
     "price": "29990",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Pantalón Deportivo Premium Hombre Negro",
+  "image": "https://urbanset-rho.vercel.app/prod-pantalon-premium-negro.webp",
+  "description": "Pantalón deportivo de estilo urbano confeccionado con materiales de excelente calidad. Diseñado para brindar comodidad durante todo el día, cuenta con cintura elastizada, cordón regulable y bolsillos laterales. Ideal para entrenar, salir o utilizar diariamente.",
+  "brand": { "@type": "Brand", "name": "UrbanSet" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://urbanset-rho.vercel.app/#productos",
+    "priceCurrency": "ARS",
+    "price": "25000",
     "availability": "https://schema.org/InStock"
   }
 }
