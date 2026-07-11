@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>URBANSET — Ropa Deportiva Premium</title>
-  <meta name="description" content="Ropa deportiva premium: camisetas, camperas, conjuntos y pantalones. Calidad real. Envío a todo el país.">
-  <meta name="keywords" content="campera hombre, campera premium, pantalón deportivo, pantalón hombre, jogger premium, camiseta argentina, camiseta premium, camiseta deportiva, ropa deportiva, urbanset">
-  <meta property="og:title" content="URBANSET — Ropa Deportiva Premium">
-  <meta property="og:description" content="Ropa deportiva premium: camisetas, camperas, conjuntos y pantalones. Calidad real. Envío a todo el país.">
-  <meta property="og:image" content="prod-campera-premium-gris-negro.webp">
+  <title>URBANSET — Streetwear Deportivo</title>
+  <meta name="description" content="Streetwear deportivo hecho con criterio: camisetas, camperas, conjuntos y pantalones. Envíos a todo el país. Estilo con disciplina.">
+  <meta name="keywords" content="campera hombre, pantalón deportivo, pantalón hombre, jogger, camiseta argentina, camiseta deportiva, streetwear, ropa deportiva, urbanset">
+  <meta property="og:title" content="URBANSET — Streetwear Deportivo">
+  <meta property="og:description" content="Streetwear deportivo hecho con criterio: camisetas, camperas, conjuntos y pantalones. Envíos a todo el país. Estilo con disciplina.">
+  <meta property="og:image" content="https://urbanset-rho.vercel.app/hero-main.webp">
+  <meta property="og:url" content="https://urbanset-rho.vercel.app/">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="URBANSET — Streetwear Deportivo">
+  <meta name="twitter:description" content="Streetwear deportivo hecho con criterio: camisetas, camperas, conjuntos y pantalones. Envíos a todo el país. Estilo con disciplina.">
+  <meta name="twitter:image" content="https://urbanset-rho.vercel.app/hero-main.webp">
   <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="https://urbanset-rho.vercel.app/">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="icon-512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="preload" as="image" href="hero-main.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -27,9 +40,9 @@
     --text:    #0a0a0a;
     --mid:     #444444;
     --muted:   #888888;
-    --dark:    #0a0a0a;
+    --dark:    #0b0b0b;
     --dark2:   #1a1a1a;
-    --gold:    #c8a850;
+    --lime:    #d6ff00;
     --green:   #16a34a;
     --red:     #dc2626;
     --blue-mp: #009ee3;
@@ -51,6 +64,11 @@
   button { cursor: pointer; border: none; background: none; font-family: inherit; }
   .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
   :focus-visible { outline: 2px solid var(--dark); outline-offset: 3px; border-radius: 2px; }
+  .hero :focus-visible,
+  .why-section :focus-visible,
+  .story-section :focus-visible,
+  .footer :focus-visible,
+  #lightboxOverlay :focus-visible { outline-color: var(--lime); }
 
   /* ============================================================
      ANNOUNCEMENT BAR
@@ -118,7 +136,7 @@
     flex-shrink: 0;
     cursor: pointer;
   }
-  .nav-logo em { font-style: normal; color: var(--gold); }
+  .nav-logo em { font-style: normal; color: var(--dark); }
   .nav-links {
     display: flex;
     gap: 28px;
@@ -145,6 +163,8 @@
   }
   .nav-links a:hover { color: var(--dark); }
   .nav-links a:hover::after { width: 100%; }
+  .nav-links a.active { color: var(--dark); }
+  .nav-links a.active::after { width: 100%; background: var(--lime); }
   .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
   .nav-btn-cta {
     background: var(--dark);
@@ -164,7 +184,7 @@
   .nav-wa-btn {
     width: 36px;
     height: 36px;
-    background: #25D366;
+    background: var(--dark);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -172,7 +192,7 @@
     color: #fff;
     transition: transform .2s, box-shadow .2s;
   }
-  .nav-wa-btn:hover { transform: scale(1.08); box-shadow: 0 4px 14px rgba(37,211,102,.35); }
+  .nav-wa-btn:hover { transform: scale(1.08); box-shadow: 0 4px 14px rgba(0,0,0,.25); }
   .nav-wa-btn svg { width: 18px; height: 18px; fill: currentColor; }
   .hamburger {
     display: none;
@@ -231,7 +251,7 @@
     margin-bottom: 28px;
   }
   .mob-drawer-logo { font-size: 1rem; font-weight: 900; letter-spacing: 5px; text-transform: uppercase; }
-  .mob-drawer-logo em { font-style: normal; color: var(--gold); }
+  .mob-drawer-logo em { font-style: normal; color: var(--dark); }
   .mob-close-btn {
     width: 32px;
     height: 32px;
@@ -268,7 +288,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 15px;
-    border-radius: var(--r-sm);
+    border-radius: 2px;
     margin-top: 20px;
     transition: background .2s;
   }
@@ -278,14 +298,14 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: #25D366;
+    background: var(--dark);
     color: #fff;
     font-size: .72rem;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 13px;
-    border-radius: var(--r-sm);
+    padding: 15px;
+    border-radius: 2px;
     margin-top: 10px;
   }
   .mob-wa-btn svg { width: 16px; height: 16px; fill: #fff; }
@@ -297,7 +317,6 @@
     position: relative;
     min-height: 100svh;
     min-height: 100vh;
-    max-height: 920px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -314,6 +333,8 @@
     object-fit: cover;
     object-position: center 25%;
     opacity: .65;
+    filter: blur(1.5px) contrast(1.05);
+    transform: scale(1.02);
   }
   .hero-overlay {
     position: absolute;
@@ -330,49 +351,30 @@
     position: relative;
     z-index: 2;
     color: #fff;
-    max-width: 640px;
-  }
-  .hero-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    background: rgba(255,255,255,.1);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,.18);
-    color: rgba(255,255,255,.88);
-    font-size: .6rem;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    padding: 6px 14px;
-    border-radius: 100px;
-    margin-bottom: 22px;
-    animation: fadeUp .65s ease both;
-  }
-  .hero-pill::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
+    max-width: 480px;
   }
   .hero-title {
-    font-size: clamp(2.1rem, 5.5vw, 3.9rem);
+    font-size: clamp(3.2rem, 11vw, 7.5rem);
     font-weight: 900;
-    line-height: 1.05;
-    letter-spacing: -1.5px;
-    margin-bottom: 18px;
+    line-height: .95;
+    letter-spacing: -2px;
+    margin-bottom: 14px;
+    animation: fadeUp .65s ease both;
+  }
+  .hero-kicker {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.75);
+    margin-bottom: 28px;
     animation: fadeUp .65s .1s ease both;
   }
-  .hero-title em { font-style: normal; color: var(--gold); }
   .hero-sub {
-    font-size: clamp(.88rem, 1.8vw, 1rem);
-    font-weight: 400;
-    color: rgba(255,255,255,.72);
-    line-height: 1.7;
-    margin-bottom: 36px;
-    max-width: 480px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 500;
+    color: rgba(255,255,255,.9);
+    margin-bottom: 40px;
     animation: fadeUp .65s .18s ease both;
   }
   .hero-actions {
@@ -382,13 +384,14 @@
     animation: fadeUp .65s .26s ease both;
   }
   .btn-primary {
-    background: #fff;
+    background: var(--lime);
     color: var(--dark);
     font-size: .7rem;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 16px 32px;
+    padding: 15px 28px;
+    border: 1.5px solid transparent;
     border-radius: 2px;
     transition: background .2s, transform .15s, box-shadow .2s;
     display: inline-flex;
@@ -398,15 +401,15 @@
     overflow: hidden;
   }
   .btn-primary:hover {
-    background: #f0f0f0;
+    background: #c2ec00;
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(0,0,0,.3);
+    box-shadow: 0 10px 28px rgba(214,255,0,.25);
   }
   .btn-outline-white {
     background: transparent;
     color: #fff;
     font-size: .7rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 15px 28px;
@@ -418,41 +421,6 @@
     gap: 8px;
   }
   .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
-  .hero-bottom {
-    position: absolute;
-    bottom: 36px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-  }
-  .hero-stats {
-    display: flex;
-    gap: 0;
-    align-items: stretch;
-    animation: fadeUp .65s .38s ease both;
-    width: fit-content;
-  }
-  .hero-stat {
-    color: #fff;
-    padding-right: 32px;
-    margin-right: 32px;
-    border-right: 1px solid rgba(255,255,255,.15);
-  }
-  .hero-stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
-  .hero-stat strong {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 900;
-    line-height: 1;
-    color: #fff;
-  }
-  .hero-stat span {
-    font-size: .58rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,.5);
-  }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(18px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -462,6 +430,7 @@
      BENEFITS
   ============================================================ */
   .benefits-section {
+    padding: 48px 0;
     background: var(--off);
     border-bottom: 1px solid var(--border);
   }
@@ -478,9 +447,8 @@
   }
   .benefit-item:last-child { border-right: none; }
   .benefit-icon {
-    font-size: 1.5rem;
     flex-shrink: 0;
-    line-height: 1;
+    color: var(--dark);
   }
   .benefit-text strong {
     display: block;
@@ -557,14 +525,14 @@
   .cat-btn.active { background: var(--dark); border-color: var(--dark); color: #fff; }
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
   }
 
   /* Product card */
   .prod-card {
     background: var(--white);
-    border: 1px solid var(--border);
+    border: none;
     border-radius: var(--r-md);
     overflow: hidden;
     position: relative;
@@ -573,8 +541,8 @@
     transition: transform .3s ease, box-shadow .3s ease;
   }
   .prod-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 48px rgba(0,0,0,.1);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(0,0,0,.08);
   }
   .prod-img-wrap {
     position: relative;
@@ -645,50 +613,26 @@
     transition: background .2s, transform .2s;
   }
   .gallery-dot.active { background: #fff; transform: scale(1.35); }
-  .prod-badge {
+  .fav-btn {
     position: absolute;
-    top: 12px;
-    left: 12px;
-    font-size: .57rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 100px;
-    z-index: 1;
-    color: #fff;
-    background: var(--dark);
-  }
-  .prod-badge.oferta { background: var(--red); }
-  .prod-badge.nuevo  { background: var(--green); }
-  .prod-viewers {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(0,0,0,.6);
-    color: rgba(255,255,255,.9);
-    font-size: .56rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 100px;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
-    gap: 6px;
-    z-index: 1;
-    backdrop-filter: blur(4px);
+    justify-content: center;
+    color: var(--dark);
+    transition: transform .15s ease, background .2s ease;
   }
-  .prod-dot {
-    width: 5px;
-    height: 5px;
-    background: #4ade80;
-    border-radius: 50%;
-    flex-shrink: 0;
-    animation: blink 2s ease infinite;
-  }
-  @keyframes blink {
-    0%,100% { opacity: 1; }
-    50%      { opacity: .3; }
-  }
+  .fav-btn:hover { transform: scale(1.08); }
+  .fav-btn svg { width: 16px; height: 16px; }
+  .fav-btn.active { color: var(--dark); }
+  .fav-btn.active svg { fill: var(--lime); }
   .prod-body {
     padding: 16px;
     flex: 1;
@@ -696,14 +640,6 @@
     flex-direction: column;
     gap: 6px;
   }
-  .prod-stars {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: .78rem;
-    color: var(--gold);
-  }
-  .prod-stars span { font-size: .58rem; color: var(--muted); font-weight: 600; }
   .prod-brand {
     font-size: .58rem;
     font-weight: 700;
@@ -746,20 +682,6 @@
     flex-wrap: wrap;
   }
   .prod-price { font-size: 1.05rem; font-weight: 900; color: var(--text); }
-  .prod-price-old {
-    font-size: .78rem;
-    color: var(--muted);
-    text-decoration: line-through;
-    font-weight: 400;
-  }
-  .prod-discount {
-    font-size: .6rem;
-    font-weight: 800;
-    color: var(--green);
-    background: rgba(22,163,74,.1);
-    padding: 2px 7px;
-    border-radius: 4px;
-  }
   .prod-stock {
     font-size: .62rem;
     font-weight: 700;
@@ -786,7 +708,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 13px;
-    border-radius: var(--r-sm);
+    border-radius: 2px;
     margin-top: 10px;
     transition: background .2s, transform .15s;
     display: flex;
@@ -813,7 +735,7 @@
     gap: 80px;
     align-items: center;
   }
-  .why-copy .section-label { color: rgba(200,168,80,.75); }
+  .why-copy .section-label { color: rgba(214,255,0,.85); }
   .why-copy .section-title { color: #fff; }
   .why-copy .section-sub { color: rgba(255,255,255,.5); max-width: 420px; }
   .why-btn {
@@ -852,7 +774,7 @@
     text-transform: uppercase;
     text-align: left;
   }
-  .why-table th:first-child { color: var(--gold); }
+  .why-table th:first-child { color: var(--lime); }
   .why-table th:last-child { color: rgba(255,255,255,.3); }
   .why-table td {
     padding: 14px 22px;
@@ -865,108 +787,6 @@
   .why-table td:last-child { color: rgba(255,255,255,.28); }
   .chk { color: #4ade80; margin-right: 8px; font-size: .85rem; }
   .xmk { color: rgba(255,100,100,.5); margin-right: 8px; font-size: .85rem; }
-
-  /* ============================================================
-     REVIEWS
-  ============================================================ */
-  .reviews-section { padding: 80px 0; background: var(--off); }
-  .reviews-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 48px;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .reviews-agg {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .reviews-score {
-    font-size: 3.2rem;
-    font-weight: 900;
-    line-height: 1;
-    color: var(--text);
-  }
-  .reviews-meta-stars { color: var(--gold); font-size: 1rem; margin-bottom: 4px; }
-  .reviews-meta strong { font-size: .75rem; font-weight: 700; display: block; }
-  .reviews-meta span { font-size: .62rem; color: var(--muted); }
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
-  .review-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: var(--r-md);
-    padding: 22px;
-  }
-  .review-head {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-  .review-avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: var(--light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--mid);
-    flex-shrink: 0;
-    border: 2px solid var(--border);
-  }
-  .review-name { font-size: .82rem; font-weight: 700; color: var(--text); }
-  .review-prod { font-size: .6rem; color: var(--muted); font-weight: 500; margin-top: 2px; }
-  .review-stars { color: var(--gold); font-size: .82rem; margin-bottom: 10px; }
-  .review-text { font-size: .78rem; color: var(--mid); line-height: 1.68; }
-  .reviews-stats {
-    display: flex;
-    gap: 48px;
-    margin-top: 56px;
-    padding-top: 40px;
-    border-top: 1px solid var(--border);
-    flex-wrap: wrap;
-  }
-  .reviews-stat strong {
-    display: block;
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--text);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .reviews-stat span {
-    font-size: .6rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  /* ============================================================
-     HERO TRUST INDICATORS
-  ============================================================ */
-  .hero-trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 20px;
-    margin-top: 20px;
-    animation: fadeUp .65s .34s ease both;
-  }
-  .hero-trust span {
-    font-size: .63rem;
-    font-weight: 600;
-    color: rgba(255,255,255,.6);
-    letter-spacing: .3px;
-  }
 
   /* ============================================================
      TRUST CARDS
@@ -986,7 +806,7 @@
   }
   .trust-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 36px rgba(0,0,0,.07);
+    box-shadow: 0 20px 48px rgba(0,0,0,.08);
   }
   .trust-icon { font-size: 1.5rem; margin-bottom: 14px; line-height: 1; }
   .trust-card h3 {
@@ -1009,7 +829,7 @@
     background: var(--dark);
   }
   .story-inner {
-    max-width: 640px;
+    max-width: 720px;
     margin: 0 auto;
     text-align: center;
   }
@@ -1018,8 +838,22 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(200,168,80,.75);
+    color: rgba(214,255,0,.85);
     margin-bottom: 24px;
+  }
+  .manifesto-words {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 40px;
+  }
+  .manifesto-words span {
+    font-size: clamp(2.2rem, 7vw, 4.4rem);
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    line-height: 1.02;
+    color: #fff;
   }
   .story-quote {
     font-size: clamp(.9rem, 2vw, 1.06rem);
@@ -1037,6 +871,209 @@
     text-transform: uppercase;
     color: rgba(255,255,255,.22);
   }
+  .btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--dark);
+    color: #fff;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px 28px;
+    border-radius: 2px;
+    margin-top: 8px;
+    transition: background .2s, transform .15s;
+  }
+  .btn-dark:hover { background: #222; transform: translateY(-2px); }
+
+  /* ============================================================
+     ASÍ FUNCIONA
+  ============================================================ */
+  .how-it-works-section { padding: 80px 0; background: var(--off); }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .step-item {
+    text-align: center;
+    padding: 0 12px;
+  }
+  .step-number {
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .step-text {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  /* ============================================================
+     ENTREGA (3 CARDS)
+  ============================================================ */
+  .delivery-section { padding: 80px 0; background: var(--white); }
+  .delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .delivery-card {
+    background: var(--off);
+    border-radius: var(--r-md);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .delivery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(0,0,0,.08);
+  }
+  .delivery-icon { color: var(--dark); margin-bottom: 20px; }
+  .delivery-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .delivery-loc {
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .delivery-text {
+    font-size: .8rem;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .delivery-btn { align-self: flex-start; }
+
+  /* ============================================================
+     POR QUÉ ELEGIR URBANSET
+  ============================================================ */
+  .why-cards-section { padding: 80px 0; background: var(--white); }
+  .why-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 32px;
+  }
+  .why-card {
+    text-align: center;
+    padding: 8px;
+    transition: transform .3s ease;
+  }
+  .why-card:hover { transform: translateY(-4px); }
+  .why-card-icon {
+    color: var(--dark);
+    margin-bottom: 18px;
+  }
+  .why-card h3 {
+    font-size: .92rem;
+    font-weight: 800;
+    letter-spacing: .3px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .why-card p {
+    font-size: .78rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  /* ============================================================
+     SHOWROOM
+  ============================================================ */
+  .showroom-section { padding: 80px 0; background: var(--white); }
+  .showroom-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .showroom-media-col { display: flex; flex-direction: column; gap: 14px; }
+  .showroom-media {
+    aspect-ratio: 4/3;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    background: var(--light);
+  }
+  .showroom-media img { width: 100%; height: 100%; object-fit: cover; }
+  .showroom-map {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 18px;
+    border-radius: var(--r-md);
+    background: var(--off);
+    border: 1px dashed var(--border);
+    color: var(--muted);
+    font-size: .72rem;
+    font-weight: 600;
+  }
+  .showroom-copy .section-sub { margin-bottom: 20px; max-width: 440px; }
+  .showroom-benefits {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+    margin-bottom: 32px;
+  }
+  .showroom-benefits li {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--mid);
+    padding-left: 16px;
+    position: relative;
+  }
+  .showroom-benefits li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--dark);
+  }
+
+  /* ============================================================
+     INSTAGRAM
+  ============================================================ */
+  .instagram-section { padding: 80px 0; background: var(--off); }
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+  .instagram-tile {
+    display: block;
+    aspect-ratio: 1/1;
+    border-radius: var(--r-sm);
+    overflow: hidden;
+    background: var(--light);
+    position: relative;
+  }
+  .instagram-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease, opacity .2s ease;
+  }
+  .instagram-tile:hover img { transform: scale(1.06); opacity: .9; }
 
   /* ============================================================
      CATEGORIES
@@ -1152,82 +1189,49 @@
   .footer {
     background: var(--dark);
     color: rgba(255,255,255,.6);
-    padding: 64px 0 0;
+    padding: 72px 0 0;
   }
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 48px;
-    padding-bottom: 52px;
+  .footer-minimal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 26px;
+    padding-bottom: 40px;
     border-bottom: 1px solid rgba(255,255,255,.07);
   }
   .footer-logo {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     font-weight: 900;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #fff;
-    margin-bottom: 14px;
   }
-  .footer-logo em { font-style: normal; color: var(--gold); }
-  .footer-desc {
-    font-size: .75rem;
-    line-height: 1.75;
-    color: rgba(255,255,255,.38);
-    max-width: 240px;
-    margin-bottom: 22px;
-  }
-  .footer-social { display: flex; gap: 10px; }
-  .footer-social a {
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(255,255,255,.12);
-    border-radius: 50%;
+  .footer-logo em { font-style: normal; color: var(--lime); }
+  .footer-links-minimal {
     display: flex;
     align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
     justify-content: center;
-    font-size: .9rem;
-    transition: border-color .2s, background .2s;
-    color: rgba(255,255,255,.55);
   }
-  .footer-social a:hover { border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.07); color: #fff; }
-  .footer-social a svg { width: 16px; height: 16px; fill: currentColor; }
-  .footer-col-title {
-    font-size: .58rem;
+  .footer-links-minimal a,
+  .footer-links-minimal span {
+    font-size: .68rem;
     font-weight: 700;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(255,255,255,.35);
-    margin-bottom: 18px;
-  }
-  .footer-col-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-  .footer-col-links a {
-    font-size: .76rem;
-    color: rgba(255,255,255,.5);
+    color: rgba(255,255,255,.55);
     transition: color .2s;
   }
-  .footer-col-links a:hover { color: #fff; }
+  .footer-links-minimal a:hover { color: #fff; }
   .footer-bottom {
     padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
   }
   .footer-copy { font-size: .65rem; color: rgba(255,255,255,.25); }
-  .footer-pays { display: flex; gap: 8px; align-items: center; }
-  .footer-pay {
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.09);
-    border-radius: 4px;
-    padding: 4px 10px;
-    font-size: .58rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: rgba(255,255,255,.35);
-    text-transform: uppercase;
-  }
 
   /* ============================================================
      LIGHTBOX
@@ -1387,6 +1391,43 @@
     margin-bottom: 10px;
   }
   .mp-sizes { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .mp-delivery-mini { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .mp-delivery-mini span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: .62rem;
+    font-weight: 600;
+    color: var(--mid);
+    background: var(--off);
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: 100px;
+  }
+  .mp-delivery-mini svg { width: 12px; height: 12px; flex-shrink: 0; }
+  .mp-why {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-bottom: 20px;
+  }
+  .mp-why span {
+    font-size: .64rem;
+    font-weight: 600;
+    color: var(--muted);
+    position: relative;
+    padding-left: 12px;
+  }
+  .mp-why span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--lime);
+  }
   .sz-btn {
     min-width: 46px;
     height: 42px;
@@ -1409,7 +1450,7 @@
     font-weight: 700;
     letter-spacing: 1px;
     padding: 16px;
-    border-radius: var(--r-sm);
+    border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1445,6 +1486,45 @@
     gap: 6px;
   }
   .mp-safe img { height: 14px; border-radius: 50%; }
+
+  /* ============================================================
+     ESTADO DEL PEDIDO
+  ============================================================ */
+  .order-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 22px;
+    padding-left: 4px;
+    border-left: 2px solid var(--border);
+  }
+  .order-step {
+    position: relative;
+    padding: 10px 0 10px 22px;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .order-step-dot {
+    position: absolute;
+    left: -7px;
+    top: 14px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--border);
+  }
+  .order-step.done { color: var(--text); }
+  .order-step.done .order-step-dot { background: var(--dark); border-color: var(--dark); }
+  .order-step.current { color: var(--text); }
+  .order-step.current .order-step-dot { background: var(--lime); border-color: var(--dark); }
+  .order-status-msg {
+    font-size: .8rem;
+    color: var(--mid);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
 
   /* ============================================================
      TOAST
@@ -1497,13 +1577,13 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     padding: 13px;
-    border-radius: var(--r-sm);
+    border-radius: 2px;
     transition: background .2s;
   }
   .mob-bar-cat:hover { background: var(--border); }
   .mob-bar-wa {
     flex: 1;
-    background: #25D366;
+    background: var(--dark);
     color: #fff;
     text-align: center;
     font-size: .66rem;
@@ -1511,7 +1591,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     padding: 13px;
-    border-radius: var(--r-sm);
+    border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1525,7 +1605,7 @@
     bottom: 28px;
     right: 24px;
     z-index: 800;
-    background: #25D366;
+    background: var(--dark);
     color: #fff;
     width: 52px;
     height: 52px;
@@ -1533,26 +1613,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 20px rgba(37,211,102,.4);
+    box-shadow: 0 6px 20px rgba(0,0,0,.3);
     transition: transform .2s, box-shadow .2s;
   }
-  .sticky-wa:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,.55); }
+  .sticky-wa:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(0,0,0,.4); }
   .sticky-wa svg { width: 26px; height: 26px; fill: #fff; }
-
-  /* ============================================================
-     RIPPLE
-  ============================================================ */
-  .ripple-el {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255,255,255,.22);
-    animation: ripple .6s ease-out forwards;
-    pointer-events: none;
-  }
-  @keyframes ripple {
-    from { transform: scale(0); opacity: .6; }
-    to   { transform: scale(1); opacity: 0; }
-  }
 
   /* ============================================================
      SCROLL REVEAL
@@ -1572,8 +1637,7 @@
      RESPONSIVE
   ============================================================ */
   @media (max-width: 1100px) {
-    .products-grid { grid-template-columns: repeat(3, 1fr); }
-    .footer-grid   { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
     .why-inner     { gap: 48px; }
   }
   @media (max-width: 860px) {
@@ -1582,7 +1646,6 @@
     .hamburger    { display: flex; }
     .products-grid { grid-template-columns: repeat(2, 1fr); }
     .cat-grid      { grid-template-columns: repeat(3, 1fr); }
-    .reviews-grid  { grid-template-columns: repeat(2, 1fr); }
     .trust-grid    { grid-template-columns: repeat(2, 1fr); }
     .why-inner     { grid-template-columns: 1fr; }
     .benefits-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1590,20 +1653,21 @@
     .benefit-item:nth-child(2) { border-right: none; }
     .mob-bar  { display: flex; }
     .sticky-wa { bottom: 84px; }
-    .hero-bottom { bottom: 80px; }
+    .showroom-inner { grid-template-columns: 1fr; gap: 32px; }
+    .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+    .steps-grid    { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
+    .delivery-grid { grid-template-columns: 1fr; gap: 20px; }
+    .why-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
   }
   @media (max-width: 580px) {
     .container     { padding: 0 16px; }
     .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .cat-grid      { grid-template-columns: repeat(2, 1fr); }
-    .reviews-grid  { grid-template-columns: 1fr; }
     .trust-grid    { grid-template-columns: 1fr; }
-    .footer-grid   { grid-template-columns: 1fr; gap: 28px; }
-    .reviews-stats { gap: 28px; }
-    .hero-stats    { gap: 0; }
-    .hero-stat     { padding-right: 20px; margin-right: 20px; }
-    .hero-stat strong { font-size: 1.2rem; }
     .why-inner     { gap: 36px; }
+    .instagram-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .steps-grid    { grid-template-columns: 1fr; gap: 24px; }
+    .why-cards-grid { grid-template-columns: 1fr; gap: 28px; }
   }
   @media (max-width: 400px) {
     .products-grid { grid-template-columns: 1fr; }
@@ -1617,18 +1681,18 @@
 ════════════════════════════════════════ -->
 <div class="ann-bar" aria-label="Información de envíos y garantía">
   <div class="ann-track">
-    <span>🚚 Envíos a todo el país</span>
-    <span>🔁 Cambios sin costo en 10 días</span>
-    <span>🔒 Pago seguro con Mercado Pago</span>
-    <span>💬 Respondemos en menos de 2 hs</span>
-    <span>✅ Prendas revisadas antes del envío</span>
-    <span>📐 Asesoramiento de talle personalizado</span>
-    <span>🚚 Envíos a todo el país</span>
-    <span>🔁 Cambios sin costo en 10 días</span>
-    <span>🔒 Pago seguro con Mercado Pago</span>
-    <span>💬 Respondemos en menos de 2 hs</span>
-    <span>✅ Prendas revisadas antes del envío</span>
-    <span>📐 Asesoramiento de talle personalizado</span>
+    <span>Envíos a todo el país</span>
+    <span>Cambios sin costo en 10 días</span>
+    <span>Pago seguro con Mercado Pago</span>
+    <span>Respondemos en menos de 2 hs</span>
+    <span>Prendas revisadas antes del envío</span>
+    <span>Asesoramiento de talle personalizado</span>
+    <span>Envíos a todo el país</span>
+    <span>Cambios sin costo en 10 días</span>
+    <span>Pago seguro con Mercado Pago</span>
+    <span>Respondemos en menos de 2 hs</span>
+    <span>Prendas revisadas antes del envío</span>
+    <span>Asesoramiento de talle personalizado</span>
   </div>
 </div>
 
@@ -1642,10 +1706,11 @@
       <a href="#" class="nav-logo">URBAN<em>SET</em></a>
 
       <div class="nav-links">
-        <a href="#productos">Productos</a>
-        <a href="#categorias">Categorías</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#faq">Ayuda</a>
+        <a href="#inicio" data-nav="inicio">Inicio</a>
+        <a href="#productos" data-nav="productos">Colección</a>
+        <a href="#showroom" data-nav="showroom">Showroom</a>
+        <a href="#como-comprar" data-nav="como-comprar">Cómo comprar</a>
+        <a href="#contacto" data-nav="contacto">Contacto</a>
       </div>
 
       <div class="nav-actions">
@@ -1657,7 +1722,7 @@
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
         </a>
         <a href="#productos" class="nav-btn-cta">Comprar ahora</a>
-        <button class="hamburger" id="hamburger" aria-label="Menú">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobDrawer">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -1668,16 +1733,17 @@
 
 <!-- Mobile drawer overlay -->
 <div class="mob-overlay" id="mobOverlay"></div>
-<nav class="mob-drawer" id="mobDrawer">
+<nav class="mob-drawer" id="mobDrawer" aria-label="Menú de navegación móvil">
   <div class="mob-drawer-head">
     <span class="mob-drawer-logo">URBAN<em>SET</em></span>
     <button class="mob-close-btn" id="mobClose">✕</button>
   </div>
   <div class="mob-nav-list">
-    <a href="#productos">Productos</a>
-    <a href="#categorias">Categorías</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#faq">Preguntas frecuentes</a>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Colección</a>
+    <a href="#showroom">Showroom</a>
+    <a href="#como-comprar">Cómo comprar</a>
+    <a href="#contacto">Contacto</a>
   </div>
   <a href="#productos" class="mob-cta-btn">Comprar ahora</a>
   <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
@@ -1691,53 +1757,64 @@
 <!-- ════════════════════════════════════════
      HERO
 ════════════════════════════════════════ -->
-<section class="hero">
+<section class="hero" id="inicio">
   <div class="hero-bg">
-    <img src="prod-campera-premium-gris-negro.webp" alt="Ropa deportiva premium URBANSET" fetchpriority="high">
+    <img src="hero-main.webp" alt="URBANSET — Streetwear deportivo" fetchpriority="high">
   </div>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-pill">Nueva colección disponible</div>
-      <h1 class="hero-title">
-        Ropa deportiva<br>
-        que se nota<br>
-        <em>desde el primer uso.</em>
-      </h1>
-      <p class="hero-sub">
-        Camisetas, camperas y conjuntos seleccionados para que te veas bien,
-        entrenés o salgas. Calidad real. Atención real.
-      </p>
+      <h1 class="hero-title">URBANSET</h1>
+      <div class="hero-kicker">Streetwear deportivo</div>
+      <p class="hero-sub">Estilo con disciplina.</p>
       <div class="hero-actions">
-        <a href="#productos" class="btn-primary">
-          Ver productos
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#nosotros" class="btn-outline-white">Conocer la marca</a>
-      </div>
-      <div class="hero-trust">
-        <span>✓ Envíos a todo el país</span>
-        <span>✓ Atención por WhatsApp</span>
-        <span>✓ Cambios sin costo</span>
-        <span>✓ Compra segura</span>
+        <a href="#productos" class="btn-primary">Explorar colección</a>
+        <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20consultar%20por%20un%20producto" target="_blank" rel="noopener" class="btn-outline-white">WhatsApp</a>
       </div>
     </div>
   </div>
-  <div class="hero-bottom">
-    <div class="container">
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>3–7</strong>
-          <span>Días de entrega</span>
-        </div>
-        <div class="hero-stat">
-          <strong>&lt;2 hs</strong>
-          <span>Te respondemos</span>
-        </div>
-        <div class="hero-stat">
-          <strong>100%</strong>
-          <span>Compra segura</span>
-        </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     POR QUÉ ELEGIR URBANSET
+════════════════════════════════════════ -->
+<section class="why-cards-section">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-label">Confianza</div>
+      <h2 class="section-title">¿Por qué elegir UrbanSet?</h2>
+      <p class="section-sub">Más que una tienda, una experiencia de compra diseñada para vos.</p>
+    </div>
+    <div class="why-cards-grid">
+      <div class="why-card reveal">
+        <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l1-5h16l1 5"/><path d="M5 9v10h14V9"/><path d="M9 19v-6h6v6"/></svg>
+        <h3>Showroom físico</h3>
+        <p>Visitanos en Villa Elisa, conocé las prendas y retirás tu compra.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        <h3>Entrega local</h3>
+        <p>La Plata y alrededores. Entregas coordinadas por UrbanSet.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>
+        <h3>Envíos nacionales</h3>
+        <p>Despachamos a todo el país con operadores confiables.</p>
+      </div>
+      <div class="why-card reveal d3">
+        <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <h3>Control de calidad</h3>
+        <p>Cada pedido se revisa cuidadosamente antes de ser entregado.</p>
+      </div>
+      <div class="why-card reveal">
+        <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <h3>Atención personalizada</h3>
+        <p>Te acompañamos antes, durante y después de la compra.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Compra segura</h3>
+        <p>Proceso claro, comunicación constante y seguimiento del pedido.</p>
       </div>
     </div>
   </div>
@@ -1750,31 +1827,31 @@
   <div class="container">
     <div class="benefits-grid">
       <div class="benefit-item reveal">
-        <div class="benefit-icon">✅</div>
-        <div class="benefit-text">
-          <strong>Calidad controlada</strong>
-          <span>Cada prenda revisada antes del envío</span>
-        </div>
-      </div>
-      <div class="benefit-item reveal d1">
-        <div class="benefit-icon">🚚</div>
+        <svg class="benefit-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 3h13v13H1z"/><path d="M14 8h4l3 3v5h-7V8z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
         <div class="benefit-text">
           <strong>Envíos a todo el país</strong>
           <span>3 a 7 días hábiles</span>
         </div>
       </div>
-      <div class="benefit-item reveal d2">
-        <div class="benefit-icon">🔁</div>
+      <div class="benefit-item reveal d1">
+        <svg class="benefit-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c-4.5-2.5-9-6.5-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.5-4.5 8.5-9 11z"/></svg>
         <div class="benefit-text">
-          <strong>Cambios fáciles</strong>
-          <span>Sin complicaciones ni costo extra</span>
+          <strong>Atención personalizada</strong>
+          <span>Te respondemos por WhatsApp</span>
+        </div>
+      </div>
+      <div class="benefit-item reveal d2">
+        <svg class="benefit-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.9 6 6.6.6-5 4.5 1.5 6.4L12 16.5 6 19.5l1.5-6.4-5-4.5 6.6-.6z"/></svg>
+        <div class="benefit-text">
+          <strong>Calidad seleccionada</strong>
+          <span>Cada prenda elegida con criterio</span>
         </div>
       </div>
       <div class="benefit-item reveal d3">
-        <div class="benefit-icon">🔒</div>
+        <svg class="benefit-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
         <div class="benefit-text">
-          <strong>Compra protegida</strong>
-          <span>Pago seguro con Mercado Pago</span>
+          <strong>Compra segura</strong>
+          <span>Pago protegido con Mercado Pago</span>
         </div>
       </div>
     </div>
@@ -1803,13 +1880,14 @@
 
     <div class="products-grid" id="productsGrid">
 
-      <!-- 1 — Campera Premium Hombre con Capucha Gris Melange y Negro -->
-      <article class="prod-card reveal" data-cat="camperas">
+      <!-- 1 — Campera Hombre con Capucha Gris Melange y Negro -->
+      <article class="prod-card reveal" data-cat="camperas" data-product-id="campera-capucha-gris-negro" data-collection="" data-new="false">
         <div class="prod-img-wrap">
-          <img class="gallery-img active" src="prod-campera-premium-gris-negro.webp" alt="Campera Premium Hombre con Capucha Gris Melange y Negro - vista frontal" loading="lazy">
-          <img class="gallery-img" src="prod-campera-premium-gris-negro-2.webp" alt="Campera Premium Hombre con Capucha Gris Melange y Negro - colgada" loading="lazy">
-          <img class="gallery-img" src="prod-campera-premium-gris-negro-3.webp" alt="Campera Premium Hombre con Capucha Gris Melange y Negro - detalle del logo" loading="lazy">
-          <img class="gallery-img" src="prod-campera-premium-gris-negro-4.webp" alt="Campera Premium Hombre con Capucha Gris Melange y Negro - tabla de talles" loading="lazy">
+          <button class="fav-btn" type="button" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.8-10.2-9.8C.2 8 1.6 4.5 5 3.6c2-.5 4 .3 5 2 1-1.7 3-2.5 5-2 3.4.9 4.8 4.4 3.2 7.6C19.5 16.2 12 21 12 21z"/></svg></button>
+          <img class="gallery-img active" src="prod-campera-premium-gris-negro.webp" alt="Campera Hombre con Capucha Gris Melange y Negro - vista frontal" loading="lazy">
+          <img class="gallery-img" src="prod-campera-premium-gris-negro-2.webp" alt="Campera Hombre con Capucha Gris Melange y Negro - colgada" loading="lazy">
+          <img class="gallery-img" src="prod-campera-premium-gris-negro-3.webp" alt="Campera Hombre con Capucha Gris Melange y Negro - detalle del logo" loading="lazy">
+          <img class="gallery-img" src="prod-campera-premium-gris-negro-4.webp" alt="Campera Hombre con Capucha Gris Melange y Negro - tabla de talles" loading="lazy">
           <button class="gallery-arrow prev" type="button" aria-label="Foto anterior">‹</button>
           <button class="gallery-arrow next" type="button" aria-label="Foto siguiente">›</button>
           <div class="gallery-dots">
@@ -1820,11 +1898,11 @@
           </div>
         </div>
         <div class="prod-body">
-          <div class="prod-brand">UrbanSet Premium</div>
-          <div class="prod-name">Campera Premium Hombre con Capucha Gris Melange y Negro</div>
+          <div class="prod-brand">UrbanSet</div>
+          <div class="prod-name">Campera Hombre con Capucha Gris Melange y Negro</div>
           <p class="prod-desc">Campera de estilo deportivo confeccionada con materiales de excelente calidad. Su diseño moderno combina paneles en gris melange con mangas y capucha en negro, ofreciendo comodidad y un look urbano para el uso diario.</p>
           <div class="prod-tags">
-            <span>Tela premium</span>
+            <span>Tela técnica</span>
             <span>Capucha ajustable</span>
             <span>Cierre completo</span>
             <span>Bolsillos funcionales</span>
@@ -1837,21 +1915,22 @@
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" onclick="abrirModalMP('Campera Premium Hombre con Capucha Gris Melange y Negro',29990,'prod-campera-premium-gris-negro.webp','UrbanSet Premium')">
+          <button class="prod-buy" onclick="abrirModalMP('Campera Hombre con Capucha Gris Melange y Negro',29990,'prod-campera-premium-gris-negro.webp','UrbanSet')">
             <img src="mp-logo.webp" alt="MP"> Comprar ahora
           </button>
         </div>
       </article>
 
-      <!-- 2 — Pantalón Deportivo Premium Hombre Negro -->
-      <article class="prod-card reveal d1" data-cat="pantalones">
+      <!-- 2 — Pantalón Deportivo Hombre Negro -->
+      <article class="prod-card reveal d1" data-cat="pantalones" data-product-id="pantalon-negro" data-collection="" data-new="false">
         <div class="prod-img-wrap">
-          <img class="gallery-img active" src="prod-pantalon-premium-negro.webp" alt="Pantalón Deportivo Premium Hombre Negro - vista frontal" loading="lazy">
-          <img class="gallery-img" src="prod-pantalon-premium-negro-2.webp" alt="Pantalón Deportivo Premium Hombre Negro - vista trasera" loading="lazy">
-          <img class="gallery-img" src="prod-pantalon-premium-negro-3.webp" alt="Pantalón Deportivo Premium Hombre Negro - detalle de cintura" loading="lazy">
-          <img class="gallery-img" src="prod-pantalon-premium-negro-4.webp" alt="Pantalón Deportivo Premium Hombre Negro - detalle de cordones" loading="lazy">
-          <img class="gallery-img" src="prod-pantalon-premium-negro-5.webp" alt="Pantalón Deportivo Premium Hombre Negro - modelo" loading="lazy">
-          <img class="gallery-img" src="prod-pantalon-premium-negro-6.webp" alt="Pantalón Deportivo Premium Hombre Negro - tabla de talles" loading="lazy">
+          <button class="fav-btn" type="button" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.8-10.2-9.8C.2 8 1.6 4.5 5 3.6c2-.5 4 .3 5 2 1-1.7 3-2.5 5-2 3.4.9 4.8 4.4 3.2 7.6C19.5 16.2 12 21 12 21z"/></svg></button>
+          <img class="gallery-img active" src="prod-pantalon-premium-negro.webp" alt="Pantalón Deportivo Hombre Negro - vista frontal" loading="lazy">
+          <img class="gallery-img" src="prod-pantalon-premium-negro-2.webp" alt="Pantalón Deportivo Hombre Negro - vista trasera" loading="lazy">
+          <img class="gallery-img" src="prod-pantalon-premium-negro-3.webp" alt="Pantalón Deportivo Hombre Negro - detalle de cintura" loading="lazy">
+          <img class="gallery-img" src="prod-pantalon-premium-negro-4.webp" alt="Pantalón Deportivo Hombre Negro - detalle de cordones" loading="lazy">
+          <img class="gallery-img" src="prod-pantalon-premium-negro-5.webp" alt="Pantalón Deportivo Hombre Negro - modelo" loading="lazy">
+          <img class="gallery-img" src="prod-pantalon-premium-negro-6.webp" alt="Pantalón Deportivo Hombre Negro - tabla de talles" loading="lazy">
           <button class="gallery-arrow prev" type="button" aria-label="Foto anterior">‹</button>
           <button class="gallery-arrow next" type="button" aria-label="Foto siguiente">›</button>
           <div class="gallery-dots">
@@ -1864,11 +1943,11 @@
           </div>
         </div>
         <div class="prod-body">
-          <div class="prod-brand">UrbanSet Premium</div>
-          <div class="prod-name">Pantalón Deportivo Premium Hombre Negro</div>
+          <div class="prod-brand">UrbanSet</div>
+          <div class="prod-name">Pantalón Deportivo Hombre Negro</div>
           <p class="prod-desc">Pantalón deportivo de estilo urbano confeccionado con materiales de excelente calidad. Diseñado para brindar comodidad durante todo el día, cuenta con cintura elastizada, cordón regulable y bolsillos laterales. Ideal para entrenar, salir o utilizar diariamente.</p>
           <div class="prod-tags">
-            <span>Tela premium</span>
+            <span>Tela técnica</span>
             <span>Cintura elastizada</span>
             <span>Cordón regulable</span>
             <span>Bolsillos laterales</span>
@@ -1881,19 +1960,20 @@
           <div class="prod-stock ok">
             <span class="prod-stock-dot"></span>En stock
           </div>
-          <button class="prod-buy" onclick="abrirModalMP('Pantalón Deportivo Premium Hombre Negro',25000,'prod-pantalon-premium-negro.webp','UrbanSet Premium')">
+          <button class="prod-buy" onclick="abrirModalMP('Pantalón Deportivo Hombre Negro',25000,'prod-pantalon-premium-negro.webp','UrbanSet')">
             <img src="mp-logo.webp" alt="MP"> Comprar ahora
           </button>
         </div>
       </article>
 
-      <!-- 3 — Pantalón Deportivo Premium Urban -->
-      <article class="prod-card reveal d2" data-cat="pantalones">
+      <!-- 3 — Pantalón Deportivo Urban -->
+      <article class="prod-card reveal d2" data-cat="pantalones" data-product-id="pantalon-urban" data-collection="" data-new="false">
         <div class="prod-img-wrap">
-          <img class="gallery-img active" src="prod-pantalon-premium-urban.webp" alt="Pantalón Deportivo Premium Urban - vista frontal" loading="lazy">
-          <img class="gallery-img" src="prod-pantalon-premium-urban-2.webp" alt="Pantalón Deportivo Premium Urban - modelo" loading="lazy">
-          <img class="gallery-img" src="prod-pantalon-premium-urban-3.webp" alt="Pantalón Deportivo Premium Urban - varias poses" loading="lazy">
-          <img class="gallery-img" src="prod-pantalon-premium-urban-4.webp" alt="Pantalón Deportivo Premium Urban - tabla de talles" loading="lazy">
+          <button class="fav-btn" type="button" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.8-10.2-9.8C.2 8 1.6 4.5 5 3.6c2-.5 4 .3 5 2 1-1.7 3-2.5 5-2 3.4.9 4.8 4.4 3.2 7.6C19.5 16.2 12 21 12 21z"/></svg></button>
+          <img class="gallery-img active" src="prod-pantalon-premium-urban.webp" alt="Pantalón Deportivo Urban - vista frontal" loading="lazy">
+          <img class="gallery-img" src="prod-pantalon-premium-urban-2.webp" alt="Pantalón Deportivo Urban - modelo" loading="lazy">
+          <img class="gallery-img" src="prod-pantalon-premium-urban-3.webp" alt="Pantalón Deportivo Urban - varias poses" loading="lazy">
+          <img class="gallery-img" src="prod-pantalon-premium-urban-4.webp" alt="Pantalón Deportivo Urban - tabla de talles" loading="lazy">
           <button class="gallery-arrow prev" type="button" aria-label="Foto anterior">‹</button>
           <button class="gallery-arrow next" type="button" aria-label="Foto siguiente">›</button>
           <div class="gallery-dots">
@@ -1904,11 +1984,11 @@
           </div>
         </div>
         <div class="prod-body">
-          <div class="prod-brand">UrbanSet Premium</div>
-          <div class="prod-name">Pantalón Deportivo Premium Urban</div>
+          <div class="prod-brand">UrbanSet</div>
+          <div class="prod-name">Pantalón Deportivo Urban</div>
           <p class="prod-desc">Combina materiales de excelente calidad con un diseño inspirado en las últimas tendencias deportivas y urbanas. Su calce cómodo, cintura elastizada con cordón regulable y bolsillos funcionales lo convierten en la opción ideal para entrenar, salir o disfrutar del día a día.</p>
           <div class="prod-tags">
-            <span>Tela premium</span>
+            <span>Tela técnica</span>
             <span>Cintura elastizada</span>
             <span>Cordón regulable</span>
             <span>Bolsillos laterales</span>
@@ -1927,11 +2007,12 @@
         </div>
       </article>
 
-      <!-- 4 — Conjunto Deportivo Premium -->
-      <article class="prod-card reveal d3" data-cat="conjuntos">
+      <!-- 4 — Conjunto Deportivo -->
+      <article class="prod-card reveal d3" data-cat="conjuntos" data-product-id="conjunto-deportivo" data-collection="" data-new="false">
         <div class="prod-img-wrap">
-          <img class="gallery-img active" src="prod-conjunto-premium.webp" alt="Conjunto Deportivo Premium - Campera + Pantalón" loading="lazy">
-          <img class="gallery-img" src="prod-conjunto-premium-2.webp" alt="Conjunto Deportivo Premium - Remera Térmica + Pantalón" loading="lazy">
+          <button class="fav-btn" type="button" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.8-10.2-9.8C.2 8 1.6 4.5 5 3.6c2-.5 4 .3 5 2 1-1.7 3-2.5 5-2 3.4.9 4.8 4.4 3.2 7.6C19.5 16.2 12 21 12 21z"/></svg></button>
+          <img class="gallery-img active" src="prod-conjunto-premium.webp" alt="Conjunto Deportivo - Campera + Pantalón" loading="lazy">
+          <img class="gallery-img" src="prod-conjunto-premium-2.webp" alt="Conjunto Deportivo - Remera Térmica + Pantalón" loading="lazy">
           <button class="gallery-arrow prev" type="button" aria-label="Foto anterior">‹</button>
           <button class="gallery-arrow next" type="button" aria-label="Foto siguiente">›</button>
           <div class="gallery-dots">
@@ -1940,11 +2021,11 @@
           </div>
         </div>
         <div class="prod-body">
-          <div class="prod-brand">UrbanSet Premium</div>
-          <div class="prod-name">Conjunto Deportivo Premium</div>
-          <p class="prod-desc">Renová tu estilo con los conjuntos deportivos premium de UrbanSet. Podés elegir entre Campera + Pantalón o Remera Térmica + Pantalón. Cada prenda fue seleccionada por su excelente calidad, comodidad y diseño moderno.</p>
+          <div class="prod-brand">UrbanSet</div>
+          <div class="prod-name">Conjunto Deportivo</div>
+          <p class="prod-desc">Renová tu estilo con los conjuntos deportivos de UrbanSet. Podés elegir entre Campera + Pantalón o Remera Térmica + Pantalón. Cada prenda fue seleccionada por su excelente calidad, comodidad y diseño moderno.</p>
           <div class="prod-tags">
-            <span>Calidad premium</span>
+            <span>Calidad seleccionada</span>
             <span>Tela resistente</span>
             <span>Excelente calce</span>
             <span>Talles reales</span>
@@ -1963,14 +2044,15 @@
         </div>
       </article>
 
-      <!-- 5 — Camiseta Premium Estilo Selección Argentina G5 -->
-      <article class="prod-card reveal" data-cat="camisetas">
+      <!-- 5 — Camiseta Estilo Selección Argentina G5 -->
+      <article class="prod-card reveal" data-cat="camisetas" data-product-id="camiseta-arg-g5" data-collection="" data-new="false">
         <div class="prod-img-wrap">
-          <img class="gallery-img active" src="prod-camiseta-premium-arg.webp" alt="Camiseta Premium Estilo Selección Argentina G5 - vista frontal" loading="lazy">
-          <img class="gallery-img" src="prod-camiseta-premium-arg-2.webp" alt="Camiseta Premium Estilo Selección Argentina G5 - vista trasera" loading="lazy">
-          <img class="gallery-img" src="prod-camiseta-premium-arg-3.webp" alt="Camiseta Premium Estilo Selección Argentina G5 - detalle de escudos" loading="lazy">
-          <img class="gallery-img" src="prod-camiseta-premium-arg-4.webp" alt="Camiseta Premium Estilo Selección Argentina G5 - modelo" loading="lazy">
-          <img class="gallery-img" src="prod-camiseta-premium-arg-5.webp" alt="Camiseta Premium Estilo Selección Argentina G5 - tabla de talles" loading="lazy">
+          <button class="fav-btn" type="button" aria-label="Guardar en favoritos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.8-10.2-9.8C.2 8 1.6 4.5 5 3.6c2-.5 4 .3 5 2 1-1.7 3-2.5 5-2 3.4.9 4.8 4.4 3.2 7.6C19.5 16.2 12 21 12 21z"/></svg></button>
+          <img class="gallery-img active" src="prod-camiseta-premium-arg.webp" alt="Camiseta Estilo Selección Argentina G5 - vista frontal" loading="lazy">
+          <img class="gallery-img" src="prod-camiseta-premium-arg-2.webp" alt="Camiseta Estilo Selección Argentina G5 - vista trasera" loading="lazy">
+          <img class="gallery-img" src="prod-camiseta-premium-arg-3.webp" alt="Camiseta Estilo Selección Argentina G5 - detalle de escudos" loading="lazy">
+          <img class="gallery-img" src="prod-camiseta-premium-arg-4.webp" alt="Camiseta Estilo Selección Argentina G5 - modelo" loading="lazy">
+          <img class="gallery-img" src="prod-camiseta-premium-arg-5.webp" alt="Camiseta Estilo Selección Argentina G5 - tabla de talles" loading="lazy">
           <button class="gallery-arrow prev" type="button" aria-label="Foto anterior">‹</button>
           <button class="gallery-arrow next" type="button" aria-label="Foto siguiente">›</button>
           <div class="gallery-dots">
@@ -1982,9 +2064,9 @@
           </div>
         </div>
         <div class="prod-body">
-          <div class="prod-brand">UrbanSet Premium</div>
-          <div class="prod-name">Camiseta Premium Estilo Selección Argentina G5</div>
-          <p class="prod-desc">Inspirada en una de las camisetas más icónicas del fútbol, esta versión G5 Premium combina diseño, comodidad y excelentes terminaciones para vestir con estilo dentro y fuera de la cancha. Tela liviana y respirable, con detalles termosellados y calce deportivo.</p>
+          <div class="prod-brand">UrbanSet</div>
+          <div class="prod-name">Camiseta Estilo Selección Argentina G5</div>
+          <p class="prod-desc">Inspirada en una de las camisetas más icónicas del fútbol, esta versión G5 combina diseño, comodidad y excelentes terminaciones para vestir con estilo dentro y fuera de la cancha. Tela liviana y respirable, con detalles termosellados y calce deportivo.</p>
           <div class="prod-tags">
             <span>Calidad G5</span>
             <span>Tela liviana</span>
@@ -2006,6 +2088,71 @@
       </article>
 
     </div><!-- /products-grid -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     ASÍ FUNCIONA
+════════════════════════════════════════ -->
+<section class="how-it-works-section" id="como-comprar">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-label">Así funciona</div>
+      <h2 class="section-title">De la elección a tu puerta</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item reveal">
+        <div class="step-number">01</div>
+        <div class="step-text">Elegís tu producto</div>
+      </div>
+      <div class="step-item reveal d1">
+        <div class="step-number">02</div>
+        <div class="step-text">Comprás</div>
+      </div>
+      <div class="step-item reveal d2">
+        <div class="step-number">03</div>
+        <div class="step-text">Preparamos cuidadosamente tu pedido</div>
+      </div>
+      <div class="step-item reveal d3">
+        <div class="step-number">04</div>
+        <div class="step-text">Lo retirás o lo recibís</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CÓMO RECIBÍS TU PEDIDO
+════════════════════════════════════════ -->
+<section class="delivery-section">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-label">Entrega</div>
+      <h2 class="section-title">¿Cómo recibís tu pedido?</h2>
+    </div>
+    <div class="delivery-grid">
+      <div class="delivery-card reveal">
+        <svg class="delivery-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l1-5h16l1 5"/><path d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"/><path d="M5 9v10h14V9"/><path d="M9 19v-6h6v6"/></svg>
+        <h3 class="delivery-title">Retiro por showroom</h3>
+        <div class="delivery-loc">Villa Elisa · La Plata</div>
+        <p class="delivery-text">Retirá tu compra personalmente, conocé nuestras prendas y recibí atención personalizada.</p>
+        <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20coordinar%20una%20visita%20al%20showroom" target="_blank" rel="noopener" class="btn-dark delivery-btn">Coordinar visita</a>
+      </div>
+      <div class="delivery-card reveal d1">
+        <svg class="delivery-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        <h3 class="delivery-title">Entrega local</h3>
+        <div class="delivery-loc">La Plata y alrededores</div>
+        <p class="delivery-text">Entrega coordinada por UrbanSet, con logística propia y atención personalizada hasta que lo recibís. El mismo día o dentro de las 24 horas, según horario de compra y disponibilidad.</p>
+        <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20consultar%20por%20entrega%20local" target="_blank" rel="noopener" class="btn-dark delivery-btn">Consultar entrega</a>
+      </div>
+      <div class="delivery-card reveal d2">
+        <svg class="delivery-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+        <h3 class="delivery-title">Envíos nacionales</h3>
+        <div class="delivery-loc">A todo el país</div>
+        <p class="delivery-text">Despachos desde Villa Elisa con Correo Argentino y Andreani. Entrega estimada de 2 a 5 días hábiles.</p>
+        <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20env%C3%ADos" target="_blank" rel="noopener" class="btn-dark delivery-btn">Más información</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2124,14 +2271,14 @@
 <section class="story-section">
   <div class="container">
     <div class="story-inner reveal">
-      <div class="story-label">Nuestra historia</div>
-      <blockquote class="story-quote">
-        Empezamos hartos de ver tiendas que venden ropa deportiva con fotos bonitas pero calidad mediocre.<br><br>
-        Quisimos hacer algo diferente: <strong>una marca pequeña y honesta, que elige cada prenda como si fuera para nosotros mismos.</strong><br><br>
-        No tenemos cientos de productos ni depósitos gigantes. Tenemos criterio, atención real y las ganas de construir algo que valga la pena.<br><br>
-        UrbanSet recién está empezando. Pero desde el primer pedido, lo hacemos con cuidado. Si comprás, te lo agradecemos de verdad.
-      </blockquote>
-      <div class="story-sig">— El equipo de URBANSET</div>
+      <div class="story-label">Filosofía de marca</div>
+      <div class="manifesto-words">
+        <span>Mentalidad</span>
+        <span>Disciplina</span>
+        <span>Constancia</span>
+      </div>
+      <p class="story-quote">No vendemos ropa. Vendemos una forma de hacer las cosas.</p>
+      <div class="story-sig">URBANSET</div>
     </div>
   </div>
 </section>
@@ -2198,6 +2345,57 @@
 </section>
 
 <!-- ════════════════════════════════════════
+     SHOWROOM
+════════════════════════════════════════ -->
+<section class="showroom-section" id="showroom">
+  <div class="container">
+    <div class="showroom-inner">
+      <div class="showroom-media-col reveal">
+        <div class="showroom-media">
+          <img src="prod-campera-premium-gris-negro-2.webp" alt="Showroom URBANSET" loading="lazy">
+        </div>
+        <div class="showroom-map">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span>Villa Elisa, La Plata — mapa próximamente</span>
+        </div>
+      </div>
+      <div class="showroom-copy reveal d1">
+        <div class="section-label">Showroom</div>
+        <h2 class="section-title">Conocé el Showroom UrbanSet</h2>
+        <p class="section-sub">Un espacio pensado para que veas, toques y elijas cada prenda en persona.</p>
+        <ul class="showroom-benefits">
+          <li>Atención personalizada</li>
+          <li>Retiro sin costo</li>
+          <li>Probate las prendas</li>
+          <li>Conocé la marca</li>
+        </ul>
+        <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20coordinar%20una%20visita%20al%20showroom" target="_blank" rel="noopener" class="btn-dark">Coordinar visita</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     INSTAGRAM
+════════════════════════════════════════ -->
+<section class="instagram-section">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-label">Instagram</div>
+      <h2 class="section-title">Seguinos @urbanset_ar</h2>
+    </div>
+    <div class="instagram-grid">
+      <a class="instagram-tile" href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener"><img src="prod-campera-premium-gris-negro.webp" alt="Publicación de Instagram URBANSET" loading="lazy"></a>
+      <a class="instagram-tile" href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener"><img src="prod-pantalon-premium-negro.webp" alt="Publicación de Instagram URBANSET" loading="lazy"></a>
+      <a class="instagram-tile" href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener"><img src="prod-pantalon-premium-urban.webp" alt="Publicación de Instagram URBANSET" loading="lazy"></a>
+      <a class="instagram-tile" href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener"><img src="prod-conjunto-premium.webp" alt="Publicación de Instagram URBANSET" loading="lazy"></a>
+      <a class="instagram-tile" href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener"><img src="prod-camiseta-premium-arg.webp" alt="Publicación de Instagram URBANSET" loading="lazy"></a>
+      <a class="instagram-tile" href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener"><img src="prod-campera-premium-gris-negro-3.webp" alt="Publicación de Instagram URBANSET" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
      FAQ
 ════════════════════════════════════════ -->
 <section class="faq-section" id="faq">
@@ -2250,7 +2448,7 @@
 
       <div class="faq-item">
         <button class="faq-q">
-          ¿La calidad es realmente premium?
+          ¿Qué tan buena es la calidad?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-a">
@@ -2285,83 +2483,21 @@
 <!-- ════════════════════════════════════════
      FOOTER
 ════════════════════════════════════════ -->
-<footer class="footer">
+<footer class="footer" id="contacto">
   <div class="container">
-    <div class="footer-grid">
-
-      <div>
-        <div class="footer-logo">URBAN<em>SET</em></div>
-        <p class="footer-desc">
-          Ropa deportiva premium para entrenar, salir y verte mejor todos los días.
-          Calidad real, atención real.
-        </p>
-        <div class="footer-social">
-          <a href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://wa.me/5492212005528" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
-          </a>
-        </div>
+    <div class="footer-minimal">
+      <div class="footer-logo">URBAN<em>SET</em></div>
+      <div class="footer-links-minimal">
+        <a href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20consultar%20por%20un%20producto" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:urbansetsoporte@gmail.com">urbansetsoporte@gmail.com</a>
+        <span>Villa Elisa, La Plata</span>
+        <span>Atención por WhatsApp las 24 hs</span>
       </div>
-
-      <div>
-        <div class="footer-col-title">Tienda</div>
-        <ul class="footer-col-links">
-          <li><a href="#productos">Todos los productos</a></li>
-          <li><a href="#productos" data-filter="camisetas">Camisetas</a></li>
-          <li><a href="#productos" data-filter="camperas">Camperas</a></li>
-          <li><a href="#productos" data-filter="pantalones">Pantalones</a></li>
-          <li><a href="#productos" data-filter="buzos">Buzos</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="footer-col-title">Ayuda</div>
-        <ul class="footer-col-links">
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-          <li><a href="#faq">Guía de talles</a></li>
-          <li><a href="#faq">Información de envíos</a></li>
-          <li><a href="#faq">Política de cambios</a></li>
-          <li><a href="#faq">Política de privacidad</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="footer-col-title">Contacto</div>
-        <ul class="footer-col-links">
-          <li>
-            <a href="https://wa.me/5492212005528" target="_blank" rel="noopener">
-              WhatsApp
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com/urbanset_ar" target="_blank" rel="noopener">
-              @urbanset_ar
-            </a>
-          </li>
-          <li><a href="mailto:urbanset.tienda@gmail.com">urbanset.tienda@gmail.com</a></li>
-        </ul>
-        <div style="margin-top:24px;">
-          <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
-             target="_blank" rel="noopener"
-             style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:11px 18px;border-radius:6px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
-            Consultar
-          </a>
-        </div>
-      </div>
-
     </div>
 
     <div class="footer-bottom">
       <p class="footer-copy">© 2026 URBANSET. Todos los derechos reservados.</p>
-      <div class="footer-pays">
-        <span class="footer-pay">Visa</span>
-        <span class="footer-pay">Mastercard</span>
-        <span class="footer-pay">MP</span>
-        <span class="footer-pay">Transferencia</span>
-      </div>
     </div>
   </div>
 </footer>
@@ -2371,6 +2507,7 @@
 ════════════════════════════════════════ -->
 <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
    class="sticky-wa"
+   id="stickyWa"
    target="_blank"
    rel="noopener"
    aria-label="Contactar por WhatsApp">
@@ -2383,7 +2520,7 @@
 <div class="mob-bar" id="mobBar">
   <a href="#productos" class="mob-bar-cat">Ver productos</a>
   <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20consultar%20por%20un%20producto"
-     class="mob-bar-wa" target="_blank" rel="noopener">
+     class="mob-bar-wa" id="mobBarWa" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.543 4.054 1.49 5.764L.057 23.07a.75.75 0 00.93.892l5.41-1.418A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 01-4.922-1.33l-.352-.21-3.643.955.971-3.553-.23-.365A9.75 9.75 0 1112 21.75z"/></svg>
     WhatsApp
   </a>
@@ -2392,7 +2529,7 @@
 <!-- ════════════════════════════════════════
      LIGHTBOX DE FOTOS
 ════════════════════════════════════════ -->
-<div class="lightbox-overlay" id="lightboxOverlay" onclick="if(event.target===this)cerrarLightbox()">
+<div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true" aria-label="Galería de fotos ampliada" onclick="if(event.target===this)cerrarLightbox()">
   <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
   <button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Foto anterior">‹</button>
   <img class="lightbox-img" id="lightboxImg" src="" alt="">
@@ -2402,10 +2539,10 @@
 <!-- ════════════════════════════════════════
      MP CHECKOUT MODAL
 ════════════════════════════════════════ -->
-<div class="mp-overlay" id="mpOverlay" onclick="if(event.target===this)cerrarModalMP()">
+<div class="mp-overlay" id="mpOverlay" role="dialog" aria-modal="true" aria-labelledby="mpBoxTitle" onclick="if(event.target===this)cerrarModalMP()">
   <div class="mp-box">
     <div class="mp-box-head">
-      <h4>URBANSET · Checkout</h4>
+      <h4 id="mpBoxTitle">URBANSET · Checkout</h4>
       <button class="mp-box-close" onclick="cerrarModalMP()">✕</button>
     </div>
     <div class="mp-box-body">
@@ -2426,6 +2563,18 @@
         <button class="sz-btn" data-sz="XL">XL</button>
         <button class="sz-btn" data-sz="XXL">XXL</button>
       </div>
+      <span class="mp-size-label">¿Cómo querés recibir tu pedido?</span>
+      <div class="mp-delivery-mini">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l1-5h16l1 5"/><path d="M5 9v10h14V9"/><path d="M9 19v-6h6v6"/></svg>Showroom</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>Entrega local</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>Envío nacional</span>
+      </div>
+      <div class="mp-why">
+        <span>Atención personalizada</span>
+        <span>Control de calidad</span>
+        <span>Preparación individual</span>
+        <span>Soporte por WhatsApp</span>
+      </div>
       <button class="mp-pay-btn" id="mpPayBtn" onclick="pagarConMP()">
         <div class="mp-spinner" id="mpSpinner"></div>
         <span class="mp-btn-txt" id="mpBtnTxt" style="display:inline-flex;align-items:center;gap:8px;">
@@ -2440,17 +2589,132 @@
   </div>
 </div>
 
+<!-- ════════════════════════════════════════
+     ESTADO DEL PEDIDO
+════════════════════════════════════════ -->
+<div class="mp-overlay" id="orderStatusOverlay" role="dialog" aria-modal="true" aria-labelledby="orderStatusTitle" onclick="if(event.target===this)cerrarOrderStatus()">
+  <div class="mp-box order-status-box">
+    <div class="mp-box-head">
+      <h4 id="orderStatusTitle">Tu pedido</h4>
+      <button class="mp-box-close" onclick="cerrarOrderStatus()">✕</button>
+    </div>
+    <div class="mp-box-body">
+      <div class="order-steps" id="orderSteps">
+        <div class="order-step" data-step="compra"><span class="order-step-dot"></span>Compra realizada</div>
+        <div class="order-step" data-step="confirmado"><span class="order-step-dot"></span>Pedido confirmado</div>
+        <div class="order-step" data-step="preparacion"><span class="order-step-dot"></span>Preparación</div>
+        <div class="order-step" data-step="control"><span class="order-step-dot"></span>Control de calidad</div>
+        <div class="order-step" data-step="entrega"><span class="order-step-dot"></span>Entrega o despacho</div>
+      </div>
+      <p class="order-status-msg" id="orderStatusMsg"></p>
+      <a href="https://wa.me/5492212005528?text=Hola!%20Quiero%20consultar%20por%20el%20estado%20de%20mi%20pedido" target="_blank" rel="noopener" class="btn-dark" style="width:100%;justify-content:center;">Escribirnos por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <!-- ════════════════════════════════════════
-     DATOS ESTRUCTURADOS (SCHEMA.ORG PRODUCT)
+     DATOS ESTRUCTURADOS (SCHEMA.ORG)
 ════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "UrbanSet",
+  "url": "https://urbanset-rho.vercel.app/",
+  "logo": "https://urbanset-rho.vercel.app/hero-main.webp",
+  "sameAs": ["https://instagram.com/urbanset_ar"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://wa.me/5492212005528",
+    "email": "urbansetsoporte@gmail.com",
+    "areaServed": "AR"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "UrbanSet",
+  "image": "https://urbanset-rho.vercel.app/hero-main.webp",
+  "url": "https://urbanset-rho.vercel.app/",
+  "email": "urbansetsoporte@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Villa Elisa, La Plata",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://urbanset-rho.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Colección", "item": "https://urbanset-rho.vercel.app/#productos" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo elijo mi talle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usamos talle estándar argentino: S, M, L, XL y XXL. Si tenés dudas entre dos talles, siempre recomendamos elegir el más grande para mayor comodidad. También podés escribirnos por WhatsApp y te asesoramos en segundos." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda el envío?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Enviamos a todo el país en 2 a 5 días hábiles con Correo Argentino y Andreani. Una vez despachado, te compartimos el número de seguimiento." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo hago un cambio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Escribinos por WhatsApp dentro de los 10 días de recibido el pedido y coordinamos el cambio sin costo adicional." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué métodos de pago aceptan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Aceptamos todos los medios de pago disponibles en Mercado Pago: tarjetas de crédito y débito, transferencia bancaria y efectivo en puntos de pago." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan buena es la calidad?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Todas las prendas son revisadas antes de ser despachadas. Las fotos que ves son de los productos reales, sin filtros ni edición exagerada." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo hago una compra?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Elegí el producto, hacé click en Comprar ahora, seleccioná tu talle y finalizá el pago con Mercado Pago." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo consultar antes de comprar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Escribinos por WhatsApp o Instagram y te respondemos en menos de 2 horas." }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Campera Premium Hombre con Capucha Gris Melange y Negro",
+  "name": "Campera Hombre con Capucha Gris Melange y Negro",
   "image": "https://urbanset-rho.vercel.app/prod-campera-premium-gris-negro.webp",
   "description": "Campera de estilo deportivo confeccionada con materiales de excelente calidad. Su diseño moderno combina paneles en gris melange con mangas y capucha en negro, ofreciendo comodidad y un look urbano para el uso diario.",
   "brand": { "@type": "Brand", "name": "UrbanSet" },
@@ -2467,7 +2731,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Pantalón Deportivo Premium Hombre Negro",
+  "name": "Pantalón Deportivo Hombre Negro",
   "image": "https://urbanset-rho.vercel.app/prod-pantalon-premium-negro.webp",
   "description": "Pantalón deportivo de estilo urbano confeccionado con materiales de excelente calidad. Diseñado para brindar comodidad durante todo el día, cuenta con cintura elastizada, cordón regulable y bolsillos laterales. Ideal para entrenar, salir o utilizar diariamente.",
   "brand": { "@type": "Brand", "name": "UrbanSet" },
@@ -2497,6 +2761,7 @@ var mpTalle = null;
 function abrirModalMP(nombre, precio, img, marca) {
   mpCurrentProduct = { nombre: nombre, precio: precio, img: img, marca: marca || '' };
   mpTalle = null;
+  actualizarWaProducto(nombre);
 
   document.getElementById('mpProdName').textContent  = nombre;
   document.getElementById('mpProdBrand').textContent = marca || '';
@@ -2568,17 +2833,139 @@ async function pagarConMP() {
 }
 
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') cerrarModalMP();
+  if (e.key === 'Escape') { cerrarModalMP(); cerrarOrderStatus(); }
 });
 
 /* ── ESTADO DEL PAGO (return URL de MP) ── */
+function abrirOrderStatus(estado) {
+  var doneSteps = { ok: ['compra', 'confirmado'], pendiente: ['compra'] }[estado] || [];
+  var currentStep = { ok: 'preparacion', pendiente: 'confirmado' }[estado];
+  var titles = {
+    ok: '¡Pago confirmado!',
+    pendiente: 'Pago pendiente de confirmación'
+  };
+  var messages = {
+    ok: 'Tu compra fue exitosa. Ya estamos preparando tu pedido con cuidado. Te vamos a escribir por WhatsApp para coordinar la entrega.',
+    pendiente: 'Estamos esperando la confirmación de Mercado Pago. Apenas se acredite, arrancamos con la preparación de tu pedido.'
+  };
+  document.getElementById('orderStatusTitle').textContent = titles[estado] || 'Tu pedido';
+  document.getElementById('orderStatusMsg').textContent = messages[estado] || '';
+  document.querySelectorAll('#orderSteps .order-step').forEach(function(step) {
+    var s = step.getAttribute('data-step');
+    step.classList.toggle('done', doneSteps.indexOf(s) !== -1);
+    step.classList.toggle('current', s === currentStep);
+  });
+  document.getElementById('orderStatusOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function cerrarOrderStatus() {
+  document.getElementById('orderStatusOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
 (function() {
   var params = new URLSearchParams(window.location.search);
   var pago = params.get('pago');
-  if (pago === 'ok')        setTimeout(function() { mostrarToast('¡Pago exitoso! Pronto nos comunicamos con vos 🎉', 'success', 5000); }, 400);
-  else if (pago === 'error')     setTimeout(function() { mostrarToast('Hubo un problema con el pago. Intentá de nuevo.', 'error', 5000); }, 400);
-  else if (pago === 'pendiente') setTimeout(function() { mostrarToast('Tu pago está pendiente de confirmación.', '', 5000); }, 400);
+  if (pago === 'ok' || pago === 'pendiente') setTimeout(function() { abrirOrderStatus(pago); }, 400);
+  else if (pago === 'error') setTimeout(function() { mostrarToast('Hubo un problema con el pago. Intentá de nuevo.', 'error', 5000); }, 400);
   if (pago) history.replaceState({}, '', window.location.pathname);
+})();
+
+/* ══════════════════════════════════════════
+   WHATSAPP FLOTANTE INTELIGENTE
+══════════════════════════════════════════ */
+var WA_MSG_GENERICO = 'Hola! Quiero consultar por un producto';
+function actualizarWaProducto(nombre) {
+  var texto = nombre
+    ? 'Hola! Quiero consultar por ' + nombre
+    : WA_MSG_GENERICO;
+  var url = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(texto);
+  var stickyWa = document.getElementById('stickyWa');
+  var mobBarWa = document.getElementById('mobBarWa');
+  if (stickyWa) stickyWa.href = url;
+  if (mobBarWa) mobBarWa.href = url;
+}
+(function() {
+  var cards = document.querySelectorAll('.prod-card[data-product-id]');
+  if (!cards.length || !('IntersectionObserver' in window)) return;
+  var visibles = new Map();
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) visibles.set(entry.target, entry.intersectionRatio);
+      else visibles.delete(entry.target);
+    });
+    var mejor = null, mejorRatio = 0;
+    visibles.forEach(function(ratio, card) {
+      if (ratio > mejorRatio) { mejorRatio = ratio; mejor = card; }
+    });
+    if (mejor) {
+      var nombre = mejor.querySelector('.prod-name');
+      actualizarWaProducto(nombre ? nombre.textContent : null);
+    } else {
+      actualizarWaProducto(null);
+    }
+  }, { threshold: [0.3, 0.5, 0.7] });
+  cards.forEach(function(card) { observer.observe(card); });
+})();
+
+/* ══════════════════════════════════════════
+   NAV: INDICADOR DE SECCIÓN ACTIVA (SCROLL SPY)
+══════════════════════════════════════════ */
+(function() {
+  var navLinks = document.querySelectorAll('.nav-links a[data-nav]');
+  if (!navLinks.length || !('IntersectionObserver' in window)) return;
+  var idToLink = {};
+  navLinks.forEach(function(link) {
+    idToLink[link.getAttribute('data-nav')] = link;
+  });
+  var sections = Object.keys(idToLink)
+    .map(function(id) { return document.getElementById(id); })
+    .filter(Boolean);
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach(function(l) { l.classList.remove('active'); });
+      var link = idToLink[entry.target.id];
+      if (link) link.classList.add('active');
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(function(sec) { observer.observe(sec); });
+})();
+
+/* ══════════════════════════════════════════
+   FAVORITOS
+══════════════════════════════════════════ */
+(function() {
+  var KEY = 'urbanset_favoritos';
+  function getFavs() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavs(favs) { localStorage.setItem(KEY, JSON.stringify(favs)); }
+
+  var favs = getFavs();
+  document.querySelectorAll('.fav-btn').forEach(function(btn) {
+    var card = btn.closest('.prod-card');
+    var id = card ? card.getAttribute('data-product-id') : null;
+    if (!id) return;
+    if (favs.indexOf(id) !== -1) btn.classList.add('active');
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      favs = getFavs();
+      var idx = favs.indexOf(id);
+      if (idx === -1) {
+        favs.push(id);
+        btn.classList.add('active');
+        mostrarToast('Agregado a favoritos', 'success');
+      } else {
+        favs.splice(idx, 1);
+        btn.classList.remove('active');
+        mostrarToast('Quitado de favoritos', '');
+      }
+      saveFavs(favs);
+    });
+  });
 })();
 
 /* ══════════════════════════════════════════
@@ -2734,12 +3121,14 @@ var mobClose   = document.getElementById('mobClose');
 
 function openDrawer() {
   hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
   mobDrawer.classList.add('open');
   mobOverlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 function closeDrawer() {
   hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
   mobDrawer.classList.remove('open');
   mobOverlay.classList.remove('open');
   document.body.style.overflow = '';
@@ -2832,24 +3221,6 @@ var revealObs = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
-
-
-/* ══════════════════════════════════════════
-   RIPPLE EFFECT
-══════════════════════════════════════════ */
-document.querySelectorAll('.prod-buy, .btn-primary, .btn-outline-white, .nav-btn-cta, .why-btn, .mob-cta-btn, .mp-pay-btn').forEach(function(btn) {
-  btn.addEventListener('click', function(e) {
-    var rect = this.getBoundingClientRect();
-    var size = Math.max(rect.width, rect.height) * 1.5;
-    var r    = document.createElement('span');
-    r.className = 'ripple-el';
-    r.style.cssText = 'width:' + size + 'px;height:' + size + 'px;' +
-      'top:'  + (e.clientY - rect.top  - size / 2) + 'px;' +
-      'left:' + (e.clientX - rect.left - size / 2) + 'px;';
-    this.appendChild(r);
-    setTimeout(function() { r.remove(); }, 650);
-  });
-});
 </script>
 </body>
 </html>
